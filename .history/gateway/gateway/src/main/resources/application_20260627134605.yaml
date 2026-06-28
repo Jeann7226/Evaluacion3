@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: mangas-service 
+              # uri: lb://mangas
+              uri: http://localhost:8081
+              predicates:
+                - Path=/api/v1/mangas/**, /api/v1/demografias/**, /api/v1/inventarios/**, /mangas/api-docs/**
+
+# --- AGREGA ESTO PARA QUE SE CONECTE A TU SERVIDOR EUREKA ---
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui/index.html
+    urls:
+      - name: Microservicio Mangas
+        url: /mangas/api-docs
+  api-docs:
+    enabled: true

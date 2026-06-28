@@ -1,0 +1,41 @@
+# 1. CONFIGURACIÓN GENERAL (Aquí decides cuál usar)
+spring:
+  profiles:
+    active: dev
+  application:
+    name: manga-service
+
+---
+# 2. PERFIL DE DESARROLLO (Para tu computadora)
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_mangas?createDatabaseIfNotExist=true
+    username: root
+    password: root # OJO: Pon la contraseña de tu MySQL aquí
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+server:
+  port: 8081
+
+---
+# 3. PERFIL DE PRODUCCIÓN (Para subir a la nube más adelante)
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: ${PORT:8081}

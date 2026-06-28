@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            # --- RUTA HACIA TU MICROSERVICIO DE MANGAS ---
+            - id: mangas-service 
+              uri: lb://mangas # Aquí le decimos que busque "mangas" en Eureka
+              predicates:
+                - Path=/api/v1/mangas/**, /api/v1/demografias/**, /api/v1/inventarios/**, /mangas/api-docs/**
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui/index.html
+    urls:
+      - name: Microservicio Mangas
+        url: /mangas/api-docs
+  api-docs:
+    enabled: true

@@ -1,0 +1,35 @@
+# 2. PERFIL DE DESARROLLO (Tu PC)
+spring:
+  profiles:
+    active: dev
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_mangas?createDatabaseIfNotExist=true
+    username: root
+    password: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    
+server:
+  port: 8081
+
+springdoc:
+  swagger-ui:
+    path: /doc/swagger-ui/index.html
+  api-docs:
+    path: /api-docs
+
+# --- AQUÍ ESTÁ LO QUE FALTABA ---
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
