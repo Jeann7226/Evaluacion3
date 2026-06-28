@@ -5,14 +5,14 @@ echo      INICIANDO MICROSERVICIOS DE TIENDA MANGA
 echo ===================================================
 
 echo [1/5] Iniciando Servidor de Descubrimiento Eureka (Puerto 8761)...
-cd eureka-server
+cd eureka
 start cmd /k "mvnw spring-boot:run"
 
 echo Esperando 12 segundos a que Eureka se estabilice...
 timeout /t 12 /nobreak > null
 
 echo [2/5] Iniciando API Gateway...
-cd ../api-gateway
+cd ../gateway
 start cmd /k "mvnw spring-boot:run"
 
 echo Esperando 5 segundos antes de lanzar los microservicios...
