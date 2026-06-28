@@ -16,6 +16,7 @@ import com.autor.autores.DTO.GeneroDTO;
 import com.autor.autores.Model.Genero;
 import com.autor.autores.Service.GeneroService;
 
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 
 @RestController
@@ -26,12 +27,14 @@ public class GeneroController {
     private GeneroService generoService;
 
     @GetMapping
+    @Operation(summary = "Obtener todos los generos", description = "Obtiene una lista de todos los generos registrados en el sistema.")
     public ResponseEntity<List<GeneroDTO>> todos() {
         List<GeneroDTO> lista = generoService.obtenerTodos();
         return new ResponseEntity<>(lista, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
+    @Operation(summary = "Obtener genero por ID", description = "Obtiene un genero específico según su ID.")
     public ResponseEntity<?> porId(@PathVariable Integer id) {
         try {
             GeneroDTO dto = generoService.buscarPorId(id);
@@ -42,6 +45,7 @@ public class GeneroController {
     }
 
     @PostMapping
+    @Operation(summary = "Registrar un nuevo genero", description = "Registra un nuevo genero en el sistema.")
     public ResponseEntity<?> registrarAutor(@Valid @RequestBody Genero genero) {
         try {
             GeneroDTO dto = generoService.guardarGenero(genero);

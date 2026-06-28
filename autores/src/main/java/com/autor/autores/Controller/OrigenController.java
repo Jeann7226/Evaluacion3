@@ -16,6 +16,7 @@ import com.autor.autores.DTO.OrigenDTO;
 import com.autor.autores.Model.Origen;
 import com.autor.autores.Service.OrigenService;
 
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 
 @RestController
@@ -26,12 +27,14 @@ public class OrigenController {
     private OrigenService origenService;
 
     @GetMapping
+    @Operation(summary = "Obtener todos los origenes", description = "Obtiene una lista de todos los origenes registrados en el sistema.")
     public ResponseEntity<List<OrigenDTO>> todos() {
         List<OrigenDTO> lista = origenService.obtenerTodos();
         return new ResponseEntity<>(lista, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
+    @Operation(summary = "Obtener origen por ID", description = "Obtiene un origen específico según su ID.")
     public ResponseEntity<?> porId(@PathVariable Integer id) {
         try {
             OrigenDTO dto = origenService.buscarPorId(id);
@@ -42,6 +45,7 @@ public class OrigenController {
     }
 
     @PostMapping
+    @Operation(summary = "Registrar un nuevo origen", description = "Registra un nuevo origen en el sistema.")
     public ResponseEntity<?> registrarAutor(@Valid @RequestBody Origen origen) {
         try {
             OrigenDTO dto = origenService.guardarOrigen(origen);

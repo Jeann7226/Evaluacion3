@@ -16,6 +16,7 @@ import com.autor.autores.DTO.AutorDTO;
 import com.autor.autores.Model.Autor;
 import com.autor.autores.Service.AutorService;
 
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 
 
@@ -27,12 +28,14 @@ public class AutorController {
     private AutorService autorService;
 
     @GetMapping
+    @Operation(summary = "Obtener todos los autores", description = "Obtiene una lista de todos los autores registrados en el sistema.")
     public ResponseEntity<List<AutorDTO>> todos() {
         List<AutorDTO> lista = autorService.obtenerTodos();
         return new ResponseEntity<>(lista, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
+    @Operation(summary = "Obtener autor por ID", description = "Obtiene un autor específico según su ID.")
     public ResponseEntity<?> porId(@PathVariable Integer id) {
         try {
             AutorDTO dto = autorService.buscarPorId(id);
@@ -43,6 +46,7 @@ public class AutorController {
     }
 
     @PostMapping
+    @Operation(summary = "Registrar un nuevo autor", description = "Registra un nuevo autor en el sistema.")
     public ResponseEntity<?> registrarAutor(@Valid @RequestBody Autor autor) {
         try {
             AutorDTO dto = autorService.guardarAutor(autor);
