@@ -1,0 +1,852 @@
+2026-06-28T03:45:21.936-04:00  INFO 2192 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : Starting UsuariosApplication using Java 21.0.11 with PID 2192 (C:\Users\rauli\Desktop\evaluacion3\usuarios\target\classes started by Rapp in C:\Users\rauli\Desktop\evaluacion3\usuarios)
+2026-06-28T03:45:21.941-04:00  INFO 2192 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-28T03:45:23.480-04:00  INFO 2192 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-28T03:45:23.706-04:00  INFO 2192 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 209 ms. Found 4 JPA repository interfaces.
+2026-06-28T03:45:24.140-04:00  INFO 2192 --- [usuarios] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3e862569-20fa-3f42-b58d-080966967552
+2026-06-28T03:45:24.767-04:00  INFO 2192 --- [usuarios] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (http)
+2026-06-28T03:45:24.800-04:00  INFO 2192 --- [usuarios] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-28T03:45:24.801-04:00  INFO 2192 --- [usuarios] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-28T03:45:24.970-04:00  INFO 2192 --- [usuarios] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2969 ms
+2026-06-28T03:45:25.544-04:00  INFO 2192 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-28T03:45:25.786-04:00  INFO 2192 --- [usuarios] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@602c167e
+2026-06-28T03:45:25.789-04:00  INFO 2192 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-28T03:45:25.805-04:00  INFO 2192 --- [usuarios] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_tienda_manga?createDatabaseIfNotExist=true (MySQL 5.5)
+2026-06-28T03:45:26.509-04:00  INFO 2192 --- [usuarios] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.039s)
+2026-06-28T03:45:26.524-04:00  INFO 2192 --- [usuarios] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_tienda_manga`: 1
+2026-06-28T03:45:26.528-04:00  INFO 2192 --- [usuarios] [main] o.f.core.internal.command.DbMigrate      : Schema `db_tienda_manga` is up to date. No migration necessary.
+2026-06-28T03:45:26.669-04:00  INFO 2192 --- [usuarios] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-28T03:45:26.798-04:00  INFO 2192 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-28T03:45:27.607-04:00  INFO 2192 --- [usuarios] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-28T03:45:27.738-04:00  WARN 2192 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-28T03:45:27.766-04:00  INFO 2192 --- [usuarios] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_tienda_manga?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: db_tienda_manga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-28T03:45:29.289-04:00  INFO 2192 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-28T03:45:29.303-04:00  INFO 2192 --- [usuarios] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28T03:45:29.424-04:00  INFO 2192 --- [usuarios] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-28T03:45:30.993-04:00  WARN 2192 --- [usuarios] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-28T03:45:32.596-04:00  INFO 2192 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T03:45:33.695-04:00  INFO 2192 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T03:45:34.983-04:00  INFO 2192 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T03:45:35.017-04:00  INFO 2192 --- [usuarios] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-28T03:45:35.081-04:00  WARN 2192 --- [usuarios] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-28T03:45:35.089-04:00  INFO 2192 --- [usuarios] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-06-28T03:45:35.193-04:00  INFO 2192 --- [usuarios] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-28T03:45:35.231-04:00  INFO 2192 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-28T03:45:35.238-04:00  INFO 2192 --- [usuarios] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T03:45:35.253-04:00  INFO 2192 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-28T03:45:35.253-04:00  INFO 2192 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-28T03:45:35.254-04:00  INFO 2192 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-28T03:45:35.255-04:00  INFO 2192 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-28T03:45:35.256-04:00  INFO 2192 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-28T03:45:35.256-04:00  INFO 2192 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-28T03:45:35.257-04:00  INFO 2192 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-28T03:45:35.871-04:00  INFO 2192 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-28T03:45:35.875-04:00  INFO 2192 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-28T03:45:35.880-04:00  INFO 2192 --- [usuarios] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-28T03:45:35.884-04:00  INFO 2192 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782632735883 with initial instances count: 1
+2026-06-28T03:45:35.892-04:00  INFO 2192 --- [usuarios] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USUARIOS with eureka with status UP
+2026-06-28T03:45:35.893-04:00  INFO 2192 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782632735893, current=UP, previous=STARTING]
+2026-06-28T03:45:35.897-04:00  INFO 2192 --- [usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USUARIOS/localhost:usuarios:8083: registering service...
+2026-06-28T03:45:35.937-04:00  INFO 2192 --- [usuarios] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8083 (http) with context path '/'
+2026-06-28T03:45:35.939-04:00  INFO 2192 --- [usuarios] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2026-06-28T03:45:35.969-04:00  INFO 2192 --- [usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USUARIOS/localhost:usuarios:8083 - registration status: 204
+2026-06-28T03:45:36.956-04:00  INFO 2192 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T03:45:37.972-04:00  INFO 2192 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T03:45:37.997-04:00  INFO 2192 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : Started UsuariosApplication in 17.791 seconds (process running for 18.809)
+2026-06-28T03:45:41.076-04:00  INFO 2192 --- [usuarios] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-28T03:45:41.077-04:00  INFO 2192 --- [usuarios] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-28T03:45:41.081-04:00  INFO 2192 --- [usuarios] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-28T03:45:42.078-04:00  INFO 2192 --- [usuarios] [http-nio-8083-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 415 ms
+2026-06-28T03:47:29.874-04:00  INFO 2192 --- [usuarios] [http-nio-8083-exec-4] c.u.u.controller.ResenaController        : HTTP OK: Se han listado las reseñas.
+2026-06-28T03:47:43.150-04:00  INFO 2192 --- [usuarios] [http-nio-8083-exec-8] c.u.u.controller.CarritoController       : HTTP OK: Se han listado los carritos.
+2026-06-28T03:47:51.016-04:00  INFO 2192 --- [usuarios] [http-nio-8083-exec-7] c.u.usuarios.controller.PagoController   : HTTP OK: Se han listado los pagos.
+2026-06-28T03:47:52.053-04:00  INFO 2192 --- [usuarios] [http-nio-8083-exec-9] c.u.usuarios.controller.PagoController   : HTTP OK: Se han listado los pagos.
+2026-06-28T03:48:34.424-04:00  INFO 2192 --- [usuarios] [http-nio-8083-exec-10] c.u.usuarios.controller.PagoController   : HTTP OK: Se han listado los pagos.
+2026-06-28T03:50:35.261-04:00  INFO 2192 --- [usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T03:56:01.887-04:00  INFO 16564 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : Starting UsuariosApplication using Java 21.0.11 with PID 16564 (C:\Users\rauli\Desktop\evaluacion3\usuarios\target\classes started by Rapp in C:\Users\rauli\Desktop\evaluacion3\usuarios)
+2026-06-28T03:56:01.893-04:00  INFO 16564 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-28T03:56:03.716-04:00  INFO 16564 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-28T03:56:03.982-04:00  INFO 16564 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 251 ms. Found 4 JPA repository interfaces.
+2026-06-28T03:56:04.533-04:00  INFO 16564 --- [usuarios] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3e862569-20fa-3f42-b58d-080966967552
+2026-06-28T03:56:05.229-04:00  INFO 16564 --- [usuarios] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (http)
+2026-06-28T03:56:05.256-04:00  INFO 16564 --- [usuarios] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-28T03:56:05.256-04:00  INFO 16564 --- [usuarios] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-28T03:56:05.419-04:00  INFO 16564 --- [usuarios] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3457 ms
+2026-06-28T03:56:06.202-04:00  INFO 16564 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-28T03:56:06.456-04:00  INFO 16564 --- [usuarios] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37d81587
+2026-06-28T03:56:06.460-04:00  INFO 16564 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-28T03:56:06.475-04:00  INFO 16564 --- [usuarios] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_tienda_manga?createDatabaseIfNotExist=true (MySQL 5.5)
+2026-06-28T03:56:07.246-04:00  INFO 16564 --- [usuarios] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.062s)
+2026-06-28T03:56:07.274-04:00  INFO 16564 --- [usuarios] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_tienda_manga`: 1
+2026-06-28T03:56:07.281-04:00  INFO 16564 --- [usuarios] [main] o.f.core.internal.command.DbMigrate      : Schema `db_tienda_manga` is up to date. No migration necessary.
+2026-06-28T03:56:07.452-04:00  INFO 16564 --- [usuarios] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-28T03:56:07.546-04:00  INFO 16564 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-28T03:56:08.304-04:00  INFO 16564 --- [usuarios] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-28T03:56:08.421-04:00  WARN 16564 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-28T03:56:08.446-04:00  INFO 16564 --- [usuarios] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_tienda_manga?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: db_tienda_manga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-28T03:56:10.009-04:00  INFO 16564 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-28T03:56:10.024-04:00  INFO 16564 --- [usuarios] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28T03:56:10.146-04:00  INFO 16564 --- [usuarios] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-28T03:56:11.745-04:00  WARN 16564 --- [usuarios] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-28T03:56:13.286-04:00  INFO 16564 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T03:56:14.361-04:00  INFO 16564 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T03:56:15.550-04:00  INFO 16564 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T03:56:15.577-04:00  INFO 16564 --- [usuarios] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-28T03:56:15.662-04:00  WARN 16564 --- [usuarios] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-28T03:56:15.673-04:00  INFO 16564 --- [usuarios] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-06-28T03:56:15.871-04:00  INFO 16564 --- [usuarios] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-28T03:56:15.911-04:00  INFO 16564 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-28T03:56:15.917-04:00  INFO 16564 --- [usuarios] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T03:56:15.932-04:00  INFO 16564 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-28T03:56:15.932-04:00  INFO 16564 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-28T03:56:15.933-04:00  INFO 16564 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-28T03:56:15.934-04:00  INFO 16564 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-28T03:56:15.934-04:00  INFO 16564 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-28T03:56:15.935-04:00  INFO 16564 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-28T03:56:15.936-04:00  INFO 16564 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-28T03:56:16.542-04:00  INFO 16564 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-28T03:56:16.545-04:00  INFO 16564 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-28T03:56:16.549-04:00  INFO 16564 --- [usuarios] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-28T03:56:16.553-04:00  INFO 16564 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782633376551 with initial instances count: 1
+2026-06-28T03:56:16.558-04:00  INFO 16564 --- [usuarios] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USUARIOS with eureka with status UP
+2026-06-28T03:56:16.559-04:00  INFO 16564 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782633376559, current=UP, previous=STARTING]
+2026-06-28T03:56:16.563-04:00  INFO 16564 --- [usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USUARIOS/localhost:usuarios:8083: registering service...
+2026-06-28T03:56:16.593-04:00  INFO 16564 --- [usuarios] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8083 (http) with context path '/'
+2026-06-28T03:56:16.594-04:00  INFO 16564 --- [usuarios] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2026-06-28T03:56:16.621-04:00  INFO 16564 --- [usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USUARIOS/localhost:usuarios:8083 - registration status: 204
+2026-06-28T03:56:17.614-04:00  INFO 16564 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T03:56:18.625-04:00  INFO 16564 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T03:56:18.639-04:00  INFO 16564 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : Started UsuariosApplication in 18.603 seconds (process running for 19.756)
+2026-06-28T03:56:22.390-04:00  INFO 16564 --- [usuarios] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-28T03:56:22.390-04:00  INFO 16564 --- [usuarios] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-28T03:56:22.394-04:00  INFO 16564 --- [usuarios] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-28T03:56:23.367-04:00  INFO 16564 --- [usuarios] [http-nio-8083-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 447 ms
+2026-06-28T03:56:36.304-04:00  INFO 16564 --- [usuarios] [http-nio-8083-exec-5] c.u.usuarios.controller.PagoController   : HTTP OK: Se han listado los pagos.
+2026-06-28T03:57:37.355-04:00  INFO 16564 --- [usuarios] [http-nio-8083-exec-7] c.u.usuarios.controller.PagoController   : HTTP OK: Se han listado los pagos.
+2026-06-28T03:58:14.085-04:00 ERROR 16564 --- [usuarios] [http-nio-8083-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.orm.ObjectOptimisticLockingFailureException: Row was already updated or deleted by another transaction for entity [com.usuario.usuarios.model.Pago with id '0']] with root cause
+
+org.hibernate.StaleObjectStateException: Row was already updated or deleted by another transaction for entity [com.usuario.usuarios.model.Pago with id '0']
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:432) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:193) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:137) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:121) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:78) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:803) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:788) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:360) ~[spring-orm-7.0.8.jar:7.0.8]
+	at jdk.proxy2/jdk.proxy2.$Proxy165.merge(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityHandlerInvocationHandler.invokeMethod(SharedEntityManagerCreator.java:239) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:383) ~[spring-orm-7.0.8.jar:7.0.8]
+	at jdk.proxy2/jdk.proxy2.$Proxy165.merge(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:667) ~[spring-data-jpa-4.1.0.jar:4.1.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:278) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:166) ~[spring-data-jpa-4.1.0.jar:4.1.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.8.jar:7.0.8]
+	at jdk.proxy2/jdk.proxy2.$Proxy177.save(Unknown Source) ~[na:na]
+	at com.usuario.usuarios.service.PagoService.registrarPago(PagoService.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.8.jar:7.0.8]
+	at com.usuario.usuarios.service.PagoService$$SpringCGLIB$$0.registrarPago(<generated>) ~[classes/:na]
+	at com.usuario.usuarios.controller.PagoController.procesarPago(PagoController.java:54) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-06-28T03:58:33.316-04:00  INFO 16564 --- [usuarios] [http-nio-8083-exec-9] c.u.usuarios.controller.PagoController   : HTTP OK: Se han listado los pagos.
+2026-06-28T03:58:48.417-04:00  INFO 16564 --- [usuarios] [http-nio-8083-exec-10] c.u.usuarios.controller.PagoController   : HTTP OK: Se han listado los pagos.
+2026-06-28T03:59:16.881-04:00 ERROR 16564 --- [usuarios] [http-nio-8083-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.orm.ObjectOptimisticLockingFailureException: Row was already updated or deleted by another transaction for entity [com.usuario.usuarios.model.Pago with id '0']] with root cause
+
+org.hibernate.StaleObjectStateException: Row was already updated or deleted by another transaction for entity [com.usuario.usuarios.model.Pago with id '0']
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:432) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:193) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:137) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:121) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:78) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:803) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:788) ~[hibernate-core-7.4.1.Final.jar:7.4.1.Final]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:360) ~[spring-orm-7.0.8.jar:7.0.8]
+	at jdk.proxy2/jdk.proxy2.$Proxy165.merge(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityHandlerInvocationHandler.invokeMethod(SharedEntityManagerCreator.java:239) ~[spring-orm-7.0.8.jar:7.0.8]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:383) ~[spring-orm-7.0.8.jar:7.0.8]
+	at jdk.proxy2/jdk.proxy2.$Proxy165.merge(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:667) ~[spring-data-jpa-4.1.0.jar:4.1.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:278) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.1.0.jar:4.1.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:166) ~[spring-data-jpa-4.1.0.jar:4.1.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.8.jar:7.0.8]
+	at jdk.proxy2/jdk.proxy2.$Proxy177.save(Unknown Source) ~[na:na]
+	at com.usuario.usuarios.service.PagoService.registrarPago(PagoService.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.8.jar:7.0.8]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.8.jar:7.0.8]
+	at com.usuario.usuarios.service.PagoService$$SpringCGLIB$$0.registrarPago(<generated>) ~[classes/:na]
+	at com.usuario.usuarios.controller.PagoController.procesarPago(PagoController.java:54) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-06-28T04:00:14.898-04:00  INFO 16564 --- [usuarios] [http-nio-8083-exec-2] c.u.usuarios.controller.PagoController   : HTTP CREATED: Se ha creado el pago con la id 2
+2026-06-28T04:00:31.137-04:00  INFO 16564 --- [usuarios] [http-nio-8083-exec-3] c.u.usuarios.controller.PagoController   : HTTP OK: Se han listado los pagos.
+2026-06-28T04:01:15.954-04:00  INFO 16564 --- [usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T04:10:02.374-04:00  INFO 14016 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : Starting UsuariosApplication using Java 21.0.11 with PID 14016 (C:\Users\rauli\Desktop\evaluacion3\usuarios\target\classes started by Rapp in C:\Users\rauli\Desktop\evaluacion3\usuarios)
+2026-06-28T04:10:02.379-04:00  INFO 14016 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-28T04:10:03.786-04:00  INFO 14016 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-28T04:10:04.008-04:00  INFO 14016 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 208 ms. Found 4 JPA repository interfaces.
+2026-06-28T04:10:04.426-04:00  INFO 14016 --- [usuarios] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3e862569-20fa-3f42-b58d-080966967552
+2026-06-28T04:10:04.998-04:00  INFO 14016 --- [usuarios] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (http)
+2026-06-28T04:10:05.022-04:00  INFO 14016 --- [usuarios] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-28T04:10:05.023-04:00  INFO 14016 --- [usuarios] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-28T04:10:05.163-04:00  INFO 14016 --- [usuarios] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2720 ms
+2026-06-28T04:10:05.705-04:00  INFO 14016 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-28T04:10:05.916-04:00  INFO 14016 --- [usuarios] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fef5792
+2026-06-28T04:10:05.919-04:00  INFO 14016 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-28T04:10:05.933-04:00  INFO 14016 --- [usuarios] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_tienda_manga?createDatabaseIfNotExist=true (MySQL 5.5)
+2026-06-28T04:10:06.648-04:00  INFO 14016 --- [usuarios] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.036s)
+2026-06-28T04:10:06.662-04:00  INFO 14016 --- [usuarios] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_tienda_manga`: 1
+2026-06-28T04:10:06.666-04:00  INFO 14016 --- [usuarios] [main] o.f.core.internal.command.DbMigrate      : Schema `db_tienda_manga` is up to date. No migration necessary.
+2026-06-28T04:10:06.787-04:00  INFO 14016 --- [usuarios] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-28T04:10:06.875-04:00  INFO 14016 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-28T04:10:07.543-04:00  INFO 14016 --- [usuarios] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-28T04:10:07.670-04:00  WARN 14016 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-28T04:10:07.694-04:00  INFO 14016 --- [usuarios] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_tienda_manga?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: db_tienda_manga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-28T04:10:08.957-04:00  INFO 14016 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-28T04:10:08.971-04:00  INFO 14016 --- [usuarios] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28T04:10:09.080-04:00  INFO 14016 --- [usuarios] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-28T04:10:10.338-04:00  WARN 14016 --- [usuarios] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-28T04:10:11.810-04:00  INFO 14016 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T04:10:12.874-04:00  INFO 14016 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T04:10:14.048-04:00  INFO 14016 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T04:10:14.092-04:00  INFO 14016 --- [usuarios] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-28T04:10:14.170-04:00  WARN 14016 --- [usuarios] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-28T04:10:14.179-04:00  INFO 14016 --- [usuarios] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-06-28T04:10:14.271-04:00  INFO 14016 --- [usuarios] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-28T04:10:14.308-04:00  INFO 14016 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-28T04:10:14.320-04:00  INFO 14016 --- [usuarios] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T04:10:14.348-04:00  INFO 14016 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-28T04:10:14.348-04:00  INFO 14016 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-28T04:10:14.352-04:00  INFO 14016 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-28T04:10:14.353-04:00  INFO 14016 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-28T04:10:14.355-04:00  INFO 14016 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-28T04:10:14.359-04:00  INFO 14016 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-28T04:10:14.361-04:00  INFO 14016 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-28T04:10:14.917-04:00  INFO 14016 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-28T04:10:14.920-04:00  INFO 14016 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-28T04:10:14.924-04:00  INFO 14016 --- [usuarios] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-28T04:10:14.927-04:00  INFO 14016 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782634214926 with initial instances count: 1
+2026-06-28T04:10:14.932-04:00  INFO 14016 --- [usuarios] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USUARIOS with eureka with status UP
+2026-06-28T04:10:14.933-04:00  INFO 14016 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782634214933, current=UP, previous=STARTING]
+2026-06-28T04:10:14.938-04:00  INFO 14016 --- [usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USUARIOS/localhost:usuarios:8083: registering service...
+2026-06-28T04:10:14.967-04:00  INFO 14016 --- [usuarios] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8083 (http) with context path '/'
+2026-06-28T04:10:14.968-04:00  INFO 14016 --- [usuarios] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2026-06-28T04:10:14.992-04:00  INFO 14016 --- [usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USUARIOS/localhost:usuarios:8083 - registration status: 204
+2026-06-28T04:10:15.987-04:00  INFO 14016 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T04:10:17.010-04:00  INFO 14016 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T04:10:17.027-04:00  INFO 14016 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : Started UsuariosApplication in 16.421 seconds (process running for 17.452)
+2026-06-28T04:10:40.979-04:00  INFO 14016 --- [usuarios] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-28T04:10:40.980-04:00  INFO 14016 --- [usuarios] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-28T04:10:40.984-04:00  INFO 14016 --- [usuarios] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-28T04:10:41.843-04:00  INFO 14016 --- [usuarios] [http-nio-8083-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 471 ms
+2026-06-28T04:10:44.067-04:00  INFO 14016 --- [usuarios] [http-nio-8083-exec-5] c.u.usuarios.controller.PagoController   : HTTP OK: Se han listado los pagos.
+2026-06-28T04:10:46.064-04:00  INFO 14016 --- [usuarios] [http-nio-8083-exec-6] c.u.usuarios.controller.PagoController   : HTTP OK: Se han listado los pagos.
+2026-06-28T04:10:46.150-04:00  INFO 14016 --- [usuarios] [http-nio-8083-exec-7] c.u.usuarios.controller.PagoController   : HTTP OK: Se han listado los pagos.
+2026-06-28T04:33:13.364-04:00  INFO 14928 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : Starting UsuariosApplication using Java 21.0.11 with PID 14928 (C:\Users\rauli\Desktop\evaluacion3\usuarios\target\classes started by Rapp in C:\Users\rauli\Desktop\evaluacion3\usuarios)
+2026-06-28T04:33:13.371-04:00  INFO 14928 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-28T04:33:15.630-04:00  INFO 14928 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-28T04:33:15.850-04:00  INFO 14928 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 207 ms. Found 4 JPA repository interfaces.
+2026-06-28T04:33:16.343-04:00  INFO 14928 --- [usuarios] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3e862569-20fa-3f42-b58d-080966967552
+2026-06-28T04:33:17.070-04:00  INFO 14928 --- [usuarios] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (http)
+2026-06-28T04:33:17.119-04:00  INFO 14928 --- [usuarios] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-28T04:33:17.120-04:00  INFO 14928 --- [usuarios] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-28T04:33:17.294-04:00  INFO 14928 --- [usuarios] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3837 ms
+2026-06-28T04:33:17.964-04:00  INFO 14928 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-28T04:33:18.227-04:00  INFO 14928 --- [usuarios] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fef5792
+2026-06-28T04:33:18.231-04:00  INFO 14928 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-28T04:33:18.246-04:00  INFO 14928 --- [usuarios] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_tienda_manga?createDatabaseIfNotExist=true (MySQL 5.5)
+2026-06-28T04:33:19.021-04:00  INFO 14928 --- [usuarios] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.053s)
+2026-06-28T04:33:19.039-04:00  INFO 14928 --- [usuarios] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_tienda_manga`: 1
+2026-06-28T04:33:19.045-04:00  INFO 14928 --- [usuarios] [main] o.f.core.internal.command.DbMigrate      : Schema `db_tienda_manga` is up to date. No migration necessary.
+2026-06-28T04:33:19.198-04:00  INFO 14928 --- [usuarios] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-28T04:33:19.312-04:00  INFO 14928 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-28T04:33:20.106-04:00  INFO 14928 --- [usuarios] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-28T04:33:20.229-04:00  WARN 14928 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-28T04:33:20.257-04:00  INFO 14928 --- [usuarios] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_tienda_manga?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: db_tienda_manga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-28T04:33:21.756-04:00  INFO 14928 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-28T04:33:21.771-04:00  INFO 14928 --- [usuarios] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28T04:33:21.889-04:00  INFO 14928 --- [usuarios] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-28T04:33:23.336-04:00  WARN 14928 --- [usuarios] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-28T04:33:24.867-04:00  INFO 14928 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T04:33:25.930-04:00  INFO 14928 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T04:33:27.138-04:00  INFO 14928 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T04:33:27.182-04:00  INFO 14928 --- [usuarios] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-28T04:33:27.258-04:00  WARN 14928 --- [usuarios] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-28T04:33:27.267-04:00  INFO 14928 --- [usuarios] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-06-28T04:33:27.400-04:00  INFO 14928 --- [usuarios] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-28T04:33:27.438-04:00  INFO 14928 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-28T04:33:27.445-04:00  INFO 14928 --- [usuarios] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T04:33:27.460-04:00  INFO 14928 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-28T04:33:27.460-04:00  INFO 14928 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-28T04:33:27.461-04:00  INFO 14928 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-28T04:33:27.462-04:00  INFO 14928 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-28T04:33:27.462-04:00  INFO 14928 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-28T04:33:27.463-04:00  INFO 14928 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-28T04:33:27.464-04:00  INFO 14928 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-28T04:33:28.026-04:00  INFO 14928 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-28T04:33:28.030-04:00  INFO 14928 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-28T04:33:28.033-04:00  INFO 14928 --- [usuarios] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-28T04:33:28.037-04:00  INFO 14928 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782635608036 with initial instances count: 0
+2026-06-28T04:33:28.043-04:00  INFO 14928 --- [usuarios] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USUARIOS with eureka with status UP
+2026-06-28T04:33:28.044-04:00  INFO 14928 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782635608044, current=UP, previous=STARTING]
+2026-06-28T04:33:28.048-04:00  INFO 14928 --- [usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USUARIOS/localhost:usuarios:8083: registering service...
+2026-06-28T04:33:28.078-04:00  INFO 14928 --- [usuarios] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8083 (http) with context path '/'
+2026-06-28T04:33:28.079-04:00  INFO 14928 --- [usuarios] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2026-06-28T04:33:28.107-04:00  INFO 14928 --- [usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USUARIOS/localhost:usuarios:8083 - registration status: 204
+2026-06-28T04:33:29.098-04:00  INFO 14928 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T04:33:30.112-04:00  INFO 14928 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T04:33:30.130-04:00  INFO 14928 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : Started UsuariosApplication in 18.581 seconds (process running for 19.71)
+2026-06-28T04:33:58.039-04:00  INFO 14928 --- [usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-28T04:33:58.040-04:00  INFO 14928 --- [usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-28T04:33:58.042-04:00  INFO 14928 --- [usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-28T04:33:58.043-04:00  INFO 14928 --- [usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-28T04:33:58.043-04:00  INFO 14928 --- [usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-28T04:33:58.044-04:00  INFO 14928 --- [usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-06-28T04:33:58.045-04:00  INFO 14928 --- [usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-28T04:33:58.074-04:00  INFO 14928 --- [usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-28T04:34:16.669-04:00  INFO 14928 --- [usuarios] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-28T04:34:16.670-04:00  INFO 14928 --- [usuarios] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-28T04:34:16.674-04:00  INFO 14928 --- [usuarios] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-28T04:34:16.800-04:00  WARN 14928 --- [usuarios] [http-nio-8083-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.usuario.usuarios.model.Usuario> com.usuario.usuarios.controller.UsuarioController.guardarUsuario(com.usuario.usuarios.model.Usuario): [Field error in object 'usuario' on field 'correo': rejected value [string]; codes [Email.usuario.correo,Email.correo,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [usuario.correo,correo]; arguments []; default message [correo],[Ljakarta.validation.constraints.Pattern$Flag;@7c9ce3ae,.*]; default message [Debe ser un correo válido]] ]
+2026-06-28T04:38:27.474-04:00  INFO 14928 --- [usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T04:43:27.481-04:00  INFO 14928 --- [usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T17:27:27.359-04:00  INFO 12436 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : Starting UsuariosApplication using Java 21.0.11 with PID 12436 (C:\Users\rauli\Desktop\evaluacion3\usuarios\target\classes started by Rapp in C:\Users\rauli\Desktop\evaluacion3\usuarios)
+2026-06-28T17:27:27.364-04:00  INFO 12436 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-28T17:27:29.121-04:00  INFO 12436 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-28T17:27:29.382-04:00  INFO 12436 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 245 ms. Found 4 JPA repository interfaces.
+2026-06-28T17:27:29.887-04:00  INFO 12436 --- [usuarios] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3e862569-20fa-3f42-b58d-080966967552
+2026-06-28T17:27:30.582-04:00  INFO 12436 --- [usuarios] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (http)
+2026-06-28T17:27:30.607-04:00  INFO 12436 --- [usuarios] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-28T17:27:30.608-04:00  INFO 12436 --- [usuarios] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-28T17:27:30.735-04:00  INFO 12436 --- [usuarios] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3288 ms
+2026-06-28T17:27:31.390-04:00  INFO 12436 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-28T17:27:32.546-04:00  WARN 12436 --- [usuarios] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2026-06-28T17:27:32.552-04:00  INFO 12436 --- [usuarios] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-28T17:27:32.575-04:00  INFO 12436 --- [usuarios] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-28T17:27:32.596-04:00 ERROR 12436 --- [usuarios] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at com.usuario.usuarios.UsuariosApplication.main(UsuariosApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.sqlExceptions.FlywaySqlUnableToConnectToDbException: Unable to obtain connection from database: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:78) ~[flyway-core-12.4.0.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76) ~[flyway-core-12.4.0.jar:na]
+	at org.flywaydb.core.FlywayExecutor.init(FlywayExecutor.java:275) ~[flyway-core-12.4.0.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:120) ~[flyway-core-12.4.0.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:181) ~[flyway-core-12.4.0.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.1.0.jar:4.1.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 17 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:73) ~[flyway-core-12.4.0.jar:na]
+	... 24 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	... 35 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:690) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	... 38 common frames omitted
+
+2026-06-28T17:32:08.305-04:00  INFO 9700 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : Starting UsuariosApplication using Java 21.0.11 with PID 9700 (C:\Users\rauli\Desktop\evaluacion3\usuarios\target\classes started by Rapp in C:\Users\rauli\Desktop\evaluacion3\usuarios)
+2026-06-28T17:32:08.309-04:00  INFO 9700 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-28T17:32:09.644-04:00  INFO 9700 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-28T17:32:09.861-04:00  INFO 9700 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 202 ms. Found 4 JPA repository interfaces.
+2026-06-28T17:32:10.287-04:00  INFO 9700 --- [usuarios] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3e862569-20fa-3f42-b58d-080966967552
+2026-06-28T17:32:10.850-04:00  INFO 9700 --- [usuarios] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (http)
+2026-06-28T17:32:10.873-04:00  INFO 9700 --- [usuarios] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-28T17:32:10.873-04:00  INFO 9700 --- [usuarios] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-28T17:32:10.995-04:00  INFO 9700 --- [usuarios] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2630 ms
+2026-06-28T17:32:11.518-04:00  INFO 9700 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-28T17:32:12.661-04:00  WARN 9700 --- [usuarios] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+2026-06-28T17:32:12.666-04:00  INFO 9700 --- [usuarios] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-28T17:32:12.689-04:00  INFO 9700 --- [usuarios] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-28T17:32:12.709-04:00 ERROR 9700 --- [usuarios] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at com.usuario.usuarios.UsuariosApplication.main(UsuariosApplication.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.sqlExceptions.FlywaySqlUnableToConnectToDbException: Unable to obtain connection from database: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08S01
+Error Code : 0
+Message    : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:78) ~[flyway-core-12.4.0.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76) ~[flyway-core-12.4.0.jar:na]
+	at org.flywaydb.core.FlywayExecutor.init(FlywayExecutor.java:275) ~[flyway-core-12.4.0.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:120) ~[flyway-core-12.4.0.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:181) ~[flyway-core-12.4.0.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.1.0.jar:4.1.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 17 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:73) ~[flyway-core-12.4.0.jar:na]
+	... 24 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:142) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:964) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	... 35 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:690) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	... 38 common frames omitted
+
+2026-06-28T17:36:20.723-04:00  INFO 15716 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : Starting UsuariosApplication using Java 21.0.11 with PID 15716 (C:\Users\rauli\Desktop\evaluacion3\usuarios\target\classes started by Rapp in C:\Users\rauli\Desktop\evaluacion3\usuarios)
+2026-06-28T17:36:20.734-04:00  INFO 15716 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-28T17:36:22.678-04:00  INFO 15716 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-28T17:36:22.900-04:00  INFO 15716 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 208 ms. Found 4 JPA repository interfaces.
+2026-06-28T17:36:23.555-04:00  INFO 15716 --- [usuarios] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3e862569-20fa-3f42-b58d-080966967552
+2026-06-28T17:36:24.186-04:00  INFO 15716 --- [usuarios] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (http)
+2026-06-28T17:36:24.209-04:00  INFO 15716 --- [usuarios] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-28T17:36:24.210-04:00  INFO 15716 --- [usuarios] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-28T17:36:24.332-04:00  INFO 15716 --- [usuarios] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3491 ms
+2026-06-28T17:36:24.928-04:00  INFO 15716 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-28T17:36:25.214-04:00  INFO 15716 --- [usuarios] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e32037d
+2026-06-28T17:36:25.217-04:00  INFO 15716 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-28T17:36:25.233-04:00  INFO 15716 --- [usuarios] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_tienda_manga?createDatabaseIfNotExist=true (MySQL 5.5)
+2026-06-28T17:36:26.053-04:00  INFO 15716 --- [usuarios] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.079s)
+2026-06-28T17:36:26.067-04:00  INFO 15716 --- [usuarios] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_tienda_manga`: 1
+2026-06-28T17:36:26.073-04:00  INFO 15716 --- [usuarios] [main] o.f.core.internal.command.DbMigrate      : Schema `db_tienda_manga` is up to date. No migration necessary.
+2026-06-28T17:36:26.232-04:00  INFO 15716 --- [usuarios] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-28T17:36:26.349-04:00  INFO 15716 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-28T17:36:27.174-04:00  INFO 15716 --- [usuarios] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-28T17:36:27.305-04:00  WARN 15716 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-28T17:36:27.331-04:00  INFO 15716 --- [usuarios] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_tienda_manga?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: db_tienda_manga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-28T17:36:29.031-04:00  INFO 15716 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-28T17:36:29.045-04:00  INFO 15716 --- [usuarios] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28T17:36:29.166-04:00  INFO 15716 --- [usuarios] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-28T17:36:30.871-04:00  WARN 15716 --- [usuarios] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-28T17:36:32.412-04:00  INFO 15716 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T17:36:33.474-04:00  INFO 15716 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T17:36:34.677-04:00  INFO 15716 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T17:36:34.699-04:00  INFO 15716 --- [usuarios] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-28T17:36:34.762-04:00  WARN 15716 --- [usuarios] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-28T17:36:34.771-04:00  INFO 15716 --- [usuarios] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-06-28T17:36:34.872-04:00  INFO 15716 --- [usuarios] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-28T17:36:34.906-04:00  INFO 15716 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-28T17:36:34.912-04:00  INFO 15716 --- [usuarios] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T17:36:34.929-04:00  INFO 15716 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-28T17:36:34.931-04:00  INFO 15716 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-28T17:36:34.932-04:00  INFO 15716 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-28T17:36:34.933-04:00  INFO 15716 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-28T17:36:34.933-04:00  INFO 15716 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-28T17:36:34.934-04:00  INFO 15716 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-28T17:36:34.934-04:00  INFO 15716 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-28T17:36:35.622-04:00  INFO 15716 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-28T17:36:35.625-04:00  INFO 15716 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-28T17:36:35.628-04:00  INFO 15716 --- [usuarios] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-28T17:36:35.632-04:00  INFO 15716 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782682595630 with initial instances count: 1
+2026-06-28T17:36:35.638-04:00  INFO 15716 --- [usuarios] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USUARIOS with eureka with status UP
+2026-06-28T17:36:35.639-04:00  INFO 15716 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782682595639, current=UP, previous=STARTING]
+2026-06-28T17:36:35.642-04:00  INFO 15716 --- [usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USUARIOS/localhost:usuarios:8083: registering service...
+2026-06-28T17:36:35.671-04:00  INFO 15716 --- [usuarios] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8083 (http) with context path '/'
+2026-06-28T17:36:35.672-04:00  INFO 15716 --- [usuarios] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2026-06-28T17:36:35.698-04:00  INFO 15716 --- [usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USUARIOS/localhost:usuarios:8083 - registration status: 204
+2026-06-28T17:36:36.692-04:00  INFO 15716 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T17:36:37.704-04:00  INFO 15716 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T17:36:37.720-04:00  INFO 15716 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : Started UsuariosApplication in 18.733 seconds (process running for 19.645)
+2026-06-28T17:36:41.922-04:00  INFO 15716 --- [usuarios] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-28T17:36:41.922-04:00  INFO 15716 --- [usuarios] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-28T17:36:41.925-04:00  INFO 15716 --- [usuarios] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-28T17:36:43.175-04:00  INFO 15716 --- [usuarios] [http-nio-8083-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 455 ms
+2026-06-28T17:36:57.223-04:00  INFO 15716 --- [usuarios] [http-nio-8083-exec-5] c.u.usuarios.controller.PagoController   : HTTP OK: Se han listado los pagos.
+2026-06-28T17:38:05.530-04:00  WARN 15716 --- [usuarios] [http-nio-8083-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.ZonedDateTime` from String "2026-06-28T21:37:13.938Z": Failed to deserialize `java.time.ZonedDateTime` (with format 'Value(DayOfMonth,2)'-'Value(MonthOfYear,2)'-'Value(YearOfEra,4,19,EXCEEDS_PAD)'T'Value(HourOfDay,2)':'Value(MinuteOfHour,2)':'Value(SecondOfMinute,2)Offset(+HH:MM,'Z')'): (java.time.format.DateTimeParseException) Text '2026-06-28T21:37:13.938Z' could not be parsed at index 2]
+2026-06-28T17:41:34.947-04:00  INFO 15716 --- [usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T17:46:34.960-04:00  INFO 15716 --- [usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T17:51:34.974-04:00  INFO 15716 --- [usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T17:56:34.979-04:00  INFO 15716 --- [usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T18:01:34.996-04:00  INFO 15716 --- [usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T18:06:35.011-04:00  INFO 15716 --- [usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T18:11:35.024-04:00  INFO 15716 --- [usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T18:16:35.037-04:00  INFO 15716 --- [usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T18:21:35.041-04:00  INFO 15716 --- [usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
