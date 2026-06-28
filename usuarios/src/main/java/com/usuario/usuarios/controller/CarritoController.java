@@ -18,6 +18,10 @@ import com.usuario.usuarios.dto.CarritoDTO;
 import com.usuario.usuarios.model.Carrito;
 import com.usuario.usuarios.service.CarritoService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 
@@ -29,6 +33,11 @@ public class CarritoController {
     @Autowired
     private CarritoService carritoService;
 
+    @Operation(summary = "Buscar inventario por ID", description = "Busca un registro de stock específico.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Inventario encontrado"),
+        @ApiResponse(responseCode = "404", description = "Inventario no encontrado", content = @Content)
+    })
     @GetMapping
     public ResponseEntity<List<CarritoDTO>> listarCarritos(){
         List<CarritoDTO> carritos = carritoService.listarCarritos();
