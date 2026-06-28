@@ -2312,3 +2312,73 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
+2026-06-28T19:51:22.848-04:00  INFO 244 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : Starting UsuariosApplication using Java 21.0.11 with PID 244 (C:\Users\rauli\OneDrive\Documentos\GitHub\Evaluacion3\usuarios\target\classes started by Rapp in C:\Users\rauli\OneDrive\Documentos\GitHub\Evaluacion3\usuarios)
+2026-06-28T19:51:22.854-04:00  INFO 244 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-28T19:51:24.398-04:00  INFO 244 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-28T19:51:24.615-04:00  INFO 244 --- [usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 204 ms. Found 4 JPA repository interfaces.
+2026-06-28T19:51:25.143-04:00  INFO 244 --- [usuarios] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3e862569-20fa-3f42-b58d-080966967552
+2026-06-28T19:51:25.669-04:00  INFO 244 --- [usuarios] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (http)
+2026-06-28T19:51:25.692-04:00  INFO 244 --- [usuarios] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-28T19:51:25.692-04:00  INFO 244 --- [usuarios] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-28T19:51:25.808-04:00  INFO 244 --- [usuarios] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2883 ms
+2026-06-28T19:51:26.362-04:00  INFO 244 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-28T19:51:26.588-04:00  INFO 244 --- [usuarios] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7de2bdc7
+2026-06-28T19:51:26.592-04:00  INFO 244 --- [usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-28T19:51:26.608-04:00  INFO 244 --- [usuarios] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_tienda_manga?createDatabaseIfNotExist=true (MySQL 5.5)
+2026-06-28T19:51:27.364-04:00  INFO 244 --- [usuarios] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.035s)
+2026-06-28T19:51:27.378-04:00  INFO 244 --- [usuarios] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_tienda_manga`: 1
+2026-06-28T19:51:27.383-04:00  INFO 244 --- [usuarios] [main] o.f.core.internal.command.DbMigrate      : Schema `db_tienda_manga` is up to date. No migration necessary.
+2026-06-28T19:51:27.499-04:00  INFO 244 --- [usuarios] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-28T19:51:27.582-04:00  INFO 244 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-28T19:51:28.258-04:00  INFO 244 --- [usuarios] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-28T19:51:28.368-04:00  WARN 244 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-28T19:51:28.390-04:00  INFO 244 --- [usuarios] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_tienda_manga?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: db_tienda_manga/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-28T19:51:29.648-04:00  INFO 244 --- [usuarios] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-28T19:51:29.660-04:00  INFO 244 --- [usuarios] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28T19:51:29.776-04:00  INFO 244 --- [usuarios] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-28T19:51:31.136-04:00  WARN 244 --- [usuarios] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-28T19:51:32.633-04:00  INFO 244 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T19:51:33.719-04:00  INFO 244 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T19:51:34.928-04:00  INFO 244 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T19:51:34.970-04:00  INFO 244 --- [usuarios] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-28T19:51:35.034-04:00  WARN 244 --- [usuarios] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-28T19:51:35.043-04:00  INFO 244 --- [usuarios] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-06-28T19:51:35.146-04:00  INFO 244 --- [usuarios] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-28T19:51:35.196-04:00  INFO 244 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-28T19:51:35.202-04:00  INFO 244 --- [usuarios] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T19:51:35.215-04:00  INFO 244 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-28T19:51:35.216-04:00  INFO 244 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-28T19:51:35.217-04:00  INFO 244 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-28T19:51:35.217-04:00  INFO 244 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-28T19:51:35.217-04:00  INFO 244 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-28T19:51:35.218-04:00  INFO 244 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-28T19:51:35.218-04:00  INFO 244 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-28T19:51:35.688-04:00  INFO 244 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-28T19:51:35.691-04:00  INFO 244 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-28T19:51:35.694-04:00  INFO 244 --- [usuarios] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-28T19:51:35.697-04:00  INFO 244 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782690695696 with initial instances count: 1
+2026-06-28T19:51:35.702-04:00  INFO 244 --- [usuarios] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USUARIOS with eureka with status UP
+2026-06-28T19:51:35.703-04:00  INFO 244 --- [usuarios] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782690695703, current=UP, previous=STARTING]
+2026-06-28T19:51:35.705-04:00  INFO 244 --- [usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USUARIOS/localhost:usuarios:8083: registering service...
+2026-06-28T19:51:35.730-04:00  INFO 244 --- [usuarios] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8083 (http) with context path '/'
+2026-06-28T19:51:35.731-04:00  INFO 244 --- [usuarios] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2026-06-28T19:51:35.755-04:00  INFO 244 --- [usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USUARIOS/localhost:usuarios:8083 - registration status: 204
+2026-06-28T19:51:36.739-04:00  INFO 244 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T19:51:37.754-04:00  INFO 244 --- [usuarios] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T19:51:37.772-04:00  INFO 244 --- [usuarios] [main] c.usuario.usuarios.UsuariosApplication   : Started UsuariosApplication in 17.061 seconds (process running for 18.428)
+2026-06-28T19:53:24.055-04:00  INFO 244 --- [usuarios] [http-nio-8083-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-28T19:53:24.055-04:00  INFO 244 --- [usuarios] [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-28T19:53:24.059-04:00  INFO 244 --- [usuarios] [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-28T19:53:25.155-04:00  INFO 244 --- [usuarios] [http-nio-8083-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 480 ms
+2026-06-28T19:56:35.226-04:00  INFO 244 --- [usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
