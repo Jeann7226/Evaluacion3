@@ -17,6 +17,10 @@ import com.usuario.usuarios.dto.PagoDTO;
 import com.usuario.usuarios.model.Pago;
 import com.usuario.usuarios.service.PagoService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.media.Content;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 
@@ -28,6 +32,11 @@ public class PagoController {
     @Autowired
     private PagoService pagoService;
     
+    @Operation(summary = "Listar Pagos", description = "Lista todos los pagos disponibles.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Pagos encontrados"),
+        @ApiResponse(responseCode = "404", description = "Pagos no encontrados", content = @Content)
+    })
     @GetMapping
     public ResponseEntity<List<PagoDTO>> listarPagos() {
         List<PagoDTO> pagos = pagoService.obtenerTodos();
@@ -38,6 +47,12 @@ public class PagoController {
         log.info("HTTP OK: Se han listado los pagos.");
         return new ResponseEntity<>(pagos, HttpStatus.OK);
     }
+    
+    @Operation(summary = "Buscar Pago por ID", description = "Busca un pago específico por su ID.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Pago encontrado"),
+        @ApiResponse(responseCode = "404", description = "Pago no encontrado", content = @Content)
+    })
     @GetMapping("/{id_pago}")
     public ResponseEntity<PagoDTO> buscarPago(@PathVariable Long id_pago) {
         try{
@@ -49,6 +64,8 @@ public class PagoController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @Operation(summary = "Registrar Pago", description = "Crea un nuevo pago en la base de datos.")
     @PostMapping
     public ResponseEntity<Pago> procesarPago(@Valid @RequestBody Pago pagoNuevo) {
         Pago pago = pagoService.registrarPago(pagoNuevo);
@@ -59,6 +76,8 @@ public class PagoController {
         log.error("HTTP BAD_REQUEST: No se ha podido crear el pago.");
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
+
+    @Operation(summary = "Eliminar Pago", description = "Elimina un pago existente por su ID.")
     @DeleteMapping("/{id_pago}")
     public ResponseEntity<String> eliminarPago(@PathVariable Long id_pago) {
         String resultado = pagoService.eliminar(id_pago);
@@ -69,6 +88,12 @@ public class PagoController {
         log.error("HTTP NOT_FOUND: No se ha encontrado el pago con la id " + id_pago);
         return new ResponseEntity<>(resultado, HttpStatus.NOT_FOUND);
     }
+
+    @Operation(summary = "Buscar Historial de Pagos por Usuario", description = "Busca el historial de pagos para un usuario específico.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Pagos encontrados"),
+        @ApiResponse(responseCode = "404", description = "Pagos no encontrados", content = @Content)
+    })
     @GetMapping("/usuario/{id_usuario}")
     public ResponseEntity<List<PagoDTO>> buscarHistorialPorUsuario(@PathVariable Long id_usuario) {
         List<PagoDTO> pagos = pagoService.buscarHistorialPorUsuario(id_usuario);
