@@ -17,6 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.usuario.usuarios.dto.UsuarioDTO;
 import com.usuario.usuarios.model.Usuario;
 import com.usuario.usuarios.service.UsuarioService;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.media.Content;
 import jakarta.validation.Valid;
 
 @RestController
@@ -26,6 +31,11 @@ public class UsuarioController {
     private UsuarioService usuarioServices;
     
 
+    @Operation(summary = "Buscar usuario por ID", description = "Busca un usuario específico por su ID.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Usuario encontrado"),
+        @ApiResponse(responseCode = "404", description = "Usuario no encontrado", content = @Content)
+    })
     @GetMapping
     public ResponseEntity<List<UsuarioDTO>> listarUsuario(){
         List<UsuarioDTO> usuarios = usuarioServices.obtenerTodos();
@@ -35,6 +45,11 @@ public class UsuarioController {
         return new ResponseEntity<>(usuarios, HttpStatus.OK);
     }
     
+    @Operation(summary = "Buscar usuario por ID", description = "Busca un usuario específico por su ID.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Usuario encontrado"),
+        @ApiResponse(responseCode = "404", description = "Usuario no encontrado", content = @Content)
+    })
     @GetMapping("/{id_usuario}")
     public ResponseEntity<UsuarioDTO> buscarUsuario(@PathVariable Long id_usuario){
         try{
@@ -45,6 +60,7 @@ public class UsuarioController {
         }
     }
     
+    @Operation(summary = "Registrar Usuario", description = "Crea un nuevo usuario en la base de datos.")
     @PostMapping
     public ResponseEntity<Usuario> guardarUsuario(@Valid @RequestBody Usuario usuarioNuevo){
         Usuario usuario = usuarioServices.guardar(usuarioNuevo);
@@ -54,6 +70,7 @@ public class UsuarioController {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
+    @Operation(summary = "Editar Usuario", description = "Actualiza un usuario existente por su ID.")
     @PutMapping("/{id_usuario}")
     public ResponseEntity<Usuario> editarUsuario(@PathVariable Long id_usuario, @RequestBody Usuario usuario) {
         Usuario usuarioEditado = usuarioServices.actualizar(id_usuario, usuario);
@@ -63,6 +80,7 @@ public class UsuarioController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+    @Operation(summary = "Eliminar Usuario", description = "Elimina un usuario existente por su ID.")
     @DeleteMapping("/{id_usuario}")
     public ResponseEntity<String> eliminarUsuario(@PathVariable Long id_usuario) {
         String resultado = usuarioServices.eliminar(id_usuario);

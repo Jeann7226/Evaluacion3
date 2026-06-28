@@ -18,6 +18,10 @@ import com.usuario.usuarios.dto.ResenaDTO;
 import com.usuario.usuarios.model.Resena;
 import com.usuario.usuarios.service.ResenaService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.media.Content;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 
@@ -29,6 +33,11 @@ public class ResenaController {
     @Autowired
     private ResenaService resenaServices;
     
+    @Operation(summary = "Buscar reseña por ID", description = "Busca una reseña específica por su ID.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Reseña encontrada"),
+        @ApiResponse(responseCode = "404", description = "Reseña no encontrada", content = @Content)
+    })
     @GetMapping
     public ResponseEntity<List<ResenaDTO>> listarResenas() {
         List<ResenaDTO> resenas = resenaServices.obtenerTodo();
@@ -40,6 +49,11 @@ public class ResenaController {
         return new ResponseEntity<>(resenas, HttpStatus.OK);
     }
 
+    @Operation(summary = "Buscar reseña por ID", description = "Busca una reseña específica por su ID.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Reseña encontrada"),
+        @ApiResponse(responseCode = "404", description = "Reseña no encontrada", content = @Content)
+    })
     @GetMapping("/{id_resena}")
     public ResponseEntity<ResenaDTO> buscarResena(@PathVariable Long id_resena) {
         try{
@@ -52,6 +66,7 @@ public class ResenaController {
         }
     }
 
+    @Operation(summary = "Registrar Reseña", description = "Crea una nueva reseña en la base de datos.")
     @PostMapping
     public ResponseEntity<Resena> guardarResena(@Valid @RequestBody Resena resenaNueva) {
         Resena resena = resenaServices.agregar(resenaNueva);
@@ -63,6 +78,7 @@ public class ResenaController {
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
+    @Operation(summary = "Editar Reseña", description = "Actualiza una reseña existente por su ID.")
     @PutMapping("/{id_resena}")
     public ResponseEntity<Resena> editarResena(@PathVariable Long id_resena, @RequestBody Resena resena) {
         Resena resenaEditada = resenaServices.actualizar(id_resena, resena);
@@ -74,6 +90,7 @@ public class ResenaController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+    @Operation(summary = "Eliminar Reseña", description = "Elimina una reseña existente por su ID.")
     @DeleteMapping("/{id_resena}")
     public ResponseEntity<String> eliminarResena(@PathVariable Long id_resena) {
         String resultado = resenaServices.eliminar(id_resena);

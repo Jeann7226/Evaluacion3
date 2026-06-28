@@ -18,6 +18,10 @@ import com.usuario.usuarios.dto.CarritoDTO;
 import com.usuario.usuarios.model.Carrito;
 import com.usuario.usuarios.service.CarritoService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 
@@ -29,6 +33,11 @@ public class CarritoController {
     @Autowired
     private CarritoService carritoService;
 
+    @Operation(summary = "Listar Carritos", description = "Lista todos los carritos disponibles.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Carritos encontrados"),
+        @ApiResponse(responseCode = "404", description = "Carritos no encontrados", content = @Content)
+    })
     @GetMapping
     public ResponseEntity<List<CarritoDTO>> listarCarritos(){
         List<CarritoDTO> carritos = carritoService.listarCarritos();
@@ -40,6 +49,11 @@ public class CarritoController {
         return new ResponseEntity<>(carritos, HttpStatus.OK);
     }
 
+    @Operation(summary = "Buscar Carrito por ID", description = "Busca un carrito específico por su ID.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Carrito encontrado"),
+        @ApiResponse(responseCode = "404", description = "Carrito no encontrado", content = @Content)
+    })
     @GetMapping("/{id_carrito}")
     public ResponseEntity<CarritoDTO> buscarCarrito(@PathVariable Long id_carrito){
         try{
@@ -52,7 +66,7 @@ public class CarritoController {
         }     
     }
         
-
+    @Operation(summary = "Registrar Carrito", description = "Crea un nuevo carrito en la base de datos.")
     @PostMapping
     public ResponseEntity<Carrito> guardarCarrito(@Valid @RequestBody Carrito carrito1){
         Carrito carrito = carritoService.guardarCarrito(carrito1);
@@ -66,6 +80,7 @@ public class CarritoController {
         }
     }
 
+    @Operation(summary = "Editar Carrito", description = "Actualiza un carrito existente por su ID.")
     @PutMapping("/{id_carrito}")
     public ResponseEntity<Carrito> editarCarrito(@PathVariable Long id_carrito, @RequestBody Carrito carrito){
         Carrito carritoEditado = carritoService.editarCarrito(id_carrito, carrito);
@@ -79,6 +94,7 @@ public class CarritoController {
         }
     }
 
+    @Operation(summary = "Eliminar Carrito", description = "Elimina un carrito existente por su ID.")
     @DeleteMapping("/{id_carrito}")
     public ResponseEntity<String> eliminarCarrito(@PathVariable Long id_carrito){
         String resultado = carritoService.eliminarCarrito(id_carrito);
