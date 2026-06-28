@@ -1,0 +1,29 @@
+logging:
+  file:
+    name: logs/tienda-manga.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      file-name-pattern: "{LOG_FILE}.%d{yyyy-MM-dd}.%i.log"
+      max-history: 10
+      total-size-cap: 1GB
+
+spring:
+  application:
+    name: autores
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_tienda_manga?createDatabaseIfNotExist=true
+    username: root
+    password: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+server:
+  port: 8082
+
