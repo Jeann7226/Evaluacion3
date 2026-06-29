@@ -11,12 +11,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.autor.autores.DTO.GeneroDTO;
 import com.autor.autores.Model.Genero;
 import com.autor.autores.Service.GeneroService;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.validation.Valid;
 
 @RestController
@@ -28,6 +32,9 @@ public class GeneroController {
 
     @GetMapping
     @Operation(summary = "Obtener todos los generos", description = "Obtiene una lista de todos los generos registrados en el sistema.")
+    @ApiResponse(responseCode = "200", description = "Lista de autores obtenida exitosamente",
+            content = @Content(mediaType = "application/json", 
+            array = @ArraySchema(schema = @Schema(implementation = GeneroDTO.class))))
     public ResponseEntity<List<GeneroDTO>> todos() {
         List<GeneroDTO> lista = generoService.obtenerTodos();
         return new ResponseEntity<>(lista, HttpStatus.OK);
@@ -35,6 +42,13 @@ public class GeneroController {
 
     @GetMapping("/{id}")
     @Operation(summary = "Obtener genero por ID", description = "Obtiene un genero específico según su ID.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode  = "200", description = "Autor encontrado con exito",
+            content = @Content(mediaType = "application.json",
+            schema = @Schema(implementation = GeneroDTO.class))),
+        @ApiResponse(responseCode = "404", description = "El ID del origen no existe en la base de datos",
+            content = @Content(mediaType = "text/plain"))
+    })
     public ResponseEntity<?> porId(@PathVariable Integer id) {
         try {
             GeneroDTO dto = generoService.buscarPorId(id);
@@ -46,6 +60,13 @@ public class GeneroController {
 
     @PostMapping
     @Operation(summary = "Registrar un nuevo genero", description = "Registra un nuevo genero en el sistema.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "201", description = "Autor creado correctamente",
+            content = @Content(mediaType = "application/json",
+            schema = @Schema(implementation = GeneroDTO.class))),
+        @ApiResponse(responseCode = "400", description = "Peticion incoirrecta o datos de validacion invalidos",
+            content = @Content(mediaType = "text/plain"))
+    })
     public ResponseEntity<?> registrarAutor(@Valid @RequestBody Genero genero) {
         try {
             GeneroDTO dto = generoService.guardarGenero(genero);
