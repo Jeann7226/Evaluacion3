@@ -1,26 +1,25 @@
-# 1. CONFIGURACIÓN GENERAL
 spring:
   profiles:
     active: dev
   application:
     name: mangas
-
 ---
-# 2. PERFIL DE DESARROLLO (Tu PC)
 spring:
   config:
     activate:
       on-profile: dev
+
   datasource:
     url: jdbc:mysql://localhost:3306/db_tienda_manga_mangas?createDatabaseIfNotExist=true
     username: root
     password: 
     driver-class-name: com.mysql.cj.jdbc.Driver
+    
   jpa:
     hibernate:
       ddl-auto: none
     show-sql: true
-  # Desactivamos Flyway aquí porque ya tienes las tablas creadas manualmente
+
   flyway:
     enabled: false 
 
@@ -39,7 +38,6 @@ springdoc:
     path: /api-docs
 
 ---
-# 3. PERFIL DE PRODUCCIÓN (Para la Nube)
 spring:
   config:
     activate:
