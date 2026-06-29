@@ -1,7 +1,6 @@
 package com.autor.autores.Controller;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,13 +18,11 @@ import com.autor.autores.Service.AutorService;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
-
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
-
 
 @RestController
 @RequestMapping("api/v1/autores")
@@ -48,11 +45,11 @@ public class AutorController {
     @GetMapping("/{id}")
     @Operation(summary = "Obtener autor por ID", description = "Obtiene un autor específico según su ID.")
     @ApiResponses(value = {
-        @ApiResponse(responseCode  = "200", description = "Autor encontrado con exito",
+        @ApiResponse(responseCode  = "200", description = "Autor encontrado con éxito",
             content = @Content(mediaType = "application/json",
             schema = @Schema(implementation = AutorDTO.class))),
-        @ApiResponse(responseCode = "404", description = "El ID del origen no existe en la base de datos",
-            content = @Content(mediaType = "text/plain"))
+        @ApiResponse(responseCode = "404", description = "El ID del autor no existe en la base de datos",
+            content = @Content(mediaType = "text/plain", schema = @Schema(implementation = String.class)))
     })
     public ResponseEntity<?> porId(@PathVariable Integer id) {
         try {
@@ -69,18 +66,15 @@ public class AutorController {
         @ApiResponse(responseCode = "201", description = "Autor creado correctamente",
             content = @Content(mediaType = "application/json",
             schema = @Schema(implementation = AutorDTO.class))),
-        @ApiResponse(responseCode = "400", description = "Peticion incoirrecta o datos de validacion invalidos",
-            content = @Content(mediaType = "text/plain"))
+        @ApiResponse(responseCode = "400", description = "Petición incorrecta o datos de validación inválidos",
+            content = @Content(mediaType = "text/plain", schema = @Schema(implementation = String.class)))
     })
     public ResponseEntity<?> registrarAutor(@Valid @RequestBody Autor autor) {
         try {
             AutorDTO dto = autorService.guardarAutor(autor);
             return new ResponseEntity<>(dto, HttpStatus.CREATED);
         } catch (Exception e) {
-            return new ResponseEntity<>("Error en la busqueda del autor", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("Error en la búsqueda del autor", HttpStatus.BAD_REQUEST);
         }
     }
-    
-    
-
 }

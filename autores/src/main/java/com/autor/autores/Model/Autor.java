@@ -6,7 +6,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,7 +26,7 @@ public class Autor {
     @Size(min = 3, max = 50)
     private String nombre;
 
-    @NotNull(message = "El Genero es obligatorio")
+    @NotBlank(message = "El apellido es obligatorio")
     @Size(min = 3, max =  50)
     private String apellido;
 

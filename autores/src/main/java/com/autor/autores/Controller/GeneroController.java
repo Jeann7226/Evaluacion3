@@ -31,8 +31,8 @@ public class GeneroController {
     private GeneroService generoService;
 
     @GetMapping
-    @Operation(summary = "Obtener todos los generos", description = "Obtiene una lista de todos los generos registrados en el sistema.")
-    @ApiResponse(responseCode = "200", description = "Lista de autores obtenida exitosamente",
+    @Operation(summary = "Obtener todos los géneros", description = "Obtiene una lista de todos los géneros registrados en el sistema.")
+    @ApiResponse(responseCode = "200", description = "Lista de géneros obtenida exitosamente",
             content = @Content(mediaType = "application/json", 
             array = @ArraySchema(schema = @Schema(implementation = GeneroDTO.class))))
     public ResponseEntity<List<GeneroDTO>> todos() {
@@ -41,13 +41,13 @@ public class GeneroController {
     }
 
     @GetMapping("/{id}")
-    @Operation(summary = "Obtener genero por ID", description = "Obtiene un genero específico según su ID.")
+    @Operation(summary = "Obtener género por ID", description = "Obtiene un género específico según su ID.")
     @ApiResponses(value = {
-        @ApiResponse(responseCode  = "200", description = "Autor encontrado con exito",
+        @ApiResponse(responseCode  = "200", description = "Género encontrado con éxito",
             content = @Content(mediaType = "application/json",
             schema = @Schema(implementation = GeneroDTO.class))),
-        @ApiResponse(responseCode = "404", description = "El ID del origen no existe en la base de datos",
-            content = @Content(mediaType = "text/plain"))
+        @ApiResponse(responseCode = "404", description = "El ID del género no existe en la base de datos",
+            content = @Content(mediaType = "text/plain", schema = @Schema(implementation = String.class)))
     })
     public ResponseEntity<?> porId(@PathVariable Integer id) {
         try {
@@ -59,22 +59,20 @@ public class GeneroController {
     }
 
     @PostMapping
-    @Operation(summary = "Registrar un nuevo genero", description = "Registra un nuevo genero en el sistema.")
+    @Operation(summary = "Registrar un nuevo género", description = "Registra un nuevo género en el sistema.")
     @ApiResponses(value = {
-        @ApiResponse(responseCode = "201", description = "Autor creado correctamente",
+        @ApiResponse(responseCode = "201", description = "Género creado correctamente",
             content = @Content(mediaType = "application/json",
             schema = @Schema(implementation = GeneroDTO.class))),
-        @ApiResponse(responseCode = "400", description = "Peticion incoirrecta o datos de validacion invalidos",
-            content = @Content(mediaType = "text/plain"))
+        @ApiResponse(responseCode = "400", description = "Petición incorrecta o datos de validación inválidos",
+            content = @Content(mediaType = "text/plain", schema = @Schema(implementation = String.class)))
     })
     public ResponseEntity<?> registrarAutor(@Valid @RequestBody Genero genero) {
         try {
             GeneroDTO dto = generoService.guardarGenero(genero);
             return new ResponseEntity<>(dto, HttpStatus.CREATED);
         } catch (Exception e) {
-            return new ResponseEntity<>("Error en la busqueda del autor", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("Error en el registro del género", HttpStatus.BAD_REQUEST);
         }
     }
-
-
 }
