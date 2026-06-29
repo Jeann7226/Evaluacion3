@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AutoresApplication",
+            "request": "launch",
+            "mainClass": "com.autor.autores.AutoresApplication",
+            "projectName": "autores"
+        },
+        {
+            "type": "java",
             "name": "EurekaApplication",
             "request": "launch",
             "mainClass": "com.manga.eureka.EurekaApplication",
