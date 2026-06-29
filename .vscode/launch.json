@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "UsuariosApplication",
+            "request": "launch",
+            "mainClass": "com.usuario.usuarios.UsuariosApplication",
+            "projectName": "usuarios"
+        },
+        {
+            "type": "java",
             "name": "AutoresApplication",
             "request": "launch",
             "mainClass": "com.autor.autores.AutoresApplication",
