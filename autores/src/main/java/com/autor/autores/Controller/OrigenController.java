@@ -45,7 +45,7 @@ public class OrigenController {
     @Operation(summary = "Obtener origen por ID", description = "Obtiene un origen específico según su ID.")
     @ApiResponses(value = {
         @ApiResponse(responseCode  = "200", description = "Autor encontrado con exito",
-            content = @Content(mediaType = "application.json",
+            content = @Content(mediaType = "application/json",
             schema = @Schema(implementation = OrigenDTO.class))),
         @ApiResponse(responseCode = "404", description = "El ID del origen no existe en la base de datos",
             content = @Content(mediaType = "text/plain"))

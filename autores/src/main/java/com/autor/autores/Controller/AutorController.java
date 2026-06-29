@@ -49,7 +49,7 @@ public class AutorController {
     @Operation(summary = "Obtener autor por ID", description = "Obtiene un autor específico según su ID.")
     @ApiResponses(value = {
         @ApiResponse(responseCode  = "200", description = "Autor encontrado con exito",
-            content = @Content(mediaType = "application.json",
+            content = @Content(mediaType = "application/json",
             schema = @Schema(implementation = AutorDTO.class))),
         @ApiResponse(responseCode = "404", description = "El ID del origen no existe en la base de datos",
             content = @Content(mediaType = "text/plain"))
