@@ -12,7 +12,7 @@ import com.autor.autores.Model.Genero;
 @Repository
 public interface GeneroRepository extends JpaRepository<Genero, Integer>{
     
-    @Query("SELECT g om.autor.autores.Model.Genero(g.idGenero, g.generoTematico) FROM Genero g")
+    @Query("SELECT new com.autor.autores.DTO.GeneroDTO(g.idGenero, g.generoTematico) FROM Genero g")
     List<GeneroDTO> findAllGeneroDTOs();
 
 }
