@@ -41,5 +41,5 @@ eureka:
 
 springdoc:
   api-docs:
-    path: /autores/api-docs
+    path: /api-docs
 
