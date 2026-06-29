@@ -6,7 +6,7 @@ spring:
     name: usuarios
     
   datasource:
-    url: jdbc:mysql://localhost:3306/db_tienda_manga?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/db_tienda_manga_usuarios?createDatabaseIfNotExist=true
     username: root
     password: ""
     driverClassName: com.mysql.cj.jdbc.Driver
@@ -41,5 +41,5 @@ eureka:
 
 springdoc:
   api-docs:
-    path: /autores/api-docs
+    path: /v3/api-docs
 

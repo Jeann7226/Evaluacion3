@@ -32,8 +32,8 @@ public class OrigenController {
     private OrigenService origenService;
 
     @GetMapping
-    @Operation(summary = "Obtener todos los origenes", description = "Obtiene una lista de todos los origenes registrados en el sistema.")
-    @ApiResponse(responseCode = "200", description = "Lista de autores obtenida exitosamente",
+    @Operation(summary = "Obtener todos los orígenes", description = "Obtiene una lista de todos los orígenes registrados en el sistema.")
+    @ApiResponse(responseCode = "200", description = "Lista de orígenes obtenida exitosamente",
             content = @Content(mediaType = "application/json", 
             array = @ArraySchema(schema = @Schema(implementation = OrigenDTO.class))))
     public ResponseEntity<List<OrigenDTO>> todos() {
@@ -44,11 +44,11 @@ public class OrigenController {
     @GetMapping("/{id}")
     @Operation(summary = "Obtener origen por ID", description = "Obtiene un origen específico según su ID.")
     @ApiResponses(value = {
-        @ApiResponse(responseCode  = "200", description = "Autor encontrado con exito",
+        @ApiResponse(responseCode  = "200", description = "Origen encontrado con éxito",
             content = @Content(mediaType = "application/json",
             schema = @Schema(implementation = OrigenDTO.class))),
         @ApiResponse(responseCode = "404", description = "El ID del origen no existe en la base de datos",
-            content = @Content(mediaType = "text/plain"))
+            content = @Content(mediaType = "text/plain", schema = @Schema(implementation = String.class)))
     })
     public ResponseEntity<?> porId(@PathVariable Integer id) {
         try {
@@ -62,19 +62,18 @@ public class OrigenController {
     @PostMapping
     @Operation(summary = "Registrar un nuevo origen", description = "Registra un nuevo origen en el sistema.")
     @ApiResponses(value = {
-        @ApiResponse(responseCode = "201", description = "Autor creado correctamente",
+        @ApiResponse(responseCode = "201", description = "Origen creado correctamente",
             content = @Content(mediaType = "application/json",
             schema = @Schema(implementation = OrigenDTO.class))),
-        @ApiResponse(responseCode = "400", description = "Peticion incoirrecta o datos de validacion invalidos",
-            content = @Content(mediaType = "text/plain"))
+        @ApiResponse(responseCode = "400", description = "Petición incorrecta o datos de validación inválidos",
+            content = @Content(mediaType = "text/plain", schema = @Schema(implementation = String.class)))
     })
     public ResponseEntity<?> registrarAutor(@Valid @RequestBody Origen origen) {
         try {
             OrigenDTO dto = origenService.guardarOrigen(origen);
             return new ResponseEntity<>(dto, HttpStatus.CREATED);
         } catch (Exception e) {
-            return new ResponseEntity<>("Error en la busqueda del autor", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("Error en el registro del origen", HttpStatus.BAD_REQUEST);
         }
     }
-
 }
