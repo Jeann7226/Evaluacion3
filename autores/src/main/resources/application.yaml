@@ -23,10 +23,11 @@ spring:
   flyway:
     enabled: true
     baseline-on-migrate: true
-
 server:
   port: 8082
 
 springdoc:
   api-docs:
     path: /autores/api-docs
+
+    
