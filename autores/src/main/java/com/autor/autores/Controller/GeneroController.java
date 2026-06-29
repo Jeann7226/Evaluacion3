@@ -44,7 +44,7 @@ public class GeneroController {
     @Operation(summary = "Obtener genero por ID", description = "Obtiene un genero específico según su ID.")
     @ApiResponses(value = {
         @ApiResponse(responseCode  = "200", description = "Autor encontrado con exito",
-            content = @Content(mediaType = "application.json",
+            content = @Content(mediaType = "application/json",
             schema = @Schema(implementation = GeneroDTO.class))),
         @ApiResponse(responseCode = "404", description = "El ID del origen no existe en la base de datos",
             content = @Content(mediaType = "text/plain"))
