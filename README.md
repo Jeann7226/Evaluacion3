@@ -1,42 +1,26 @@
-# Evaluacion3
-Proyecto: Tienda Manga
+Proyecto: Tienda Manga - Módulo Autores
+
 Descripción
-Este proyecto es una API REST desarrollada como evaluación. Su objetivo es gestionar el inventario y la información de mangas, implementando patrones de arquitectura de software.
+Este proyecto es una API REST desarrollada como evaluación. Su objetivo es gestionar la información de autores, géneros temáticos y países de origen de los mangas, implementando patrones de arquitectura de software.
 
 Tecnologías Utilizadas
-Java 21
-
-Spring Boot 4.1.0
-
-MySQL
-
-JPA / Hibernate
-
-Maven
+ Java
+ Spring Boot 4.1.0
+ MySQL
+ JPA / Hibernate
+ Flyway
+ Maven
 
 Características Principales
-Arquitectura: Implementación de los patrones Repository y Service para separar la lógica de negocio del acceso a datos.
-
-Gestión de Datos:
-
-La parte de Jean fue la creación de repositorios y servicios para entidades como "manga", "demografía" e "inventario".
-
-
-Implementación de consultas personalizadas (custom queries) en los repositorios.
-
-Persistencia: Uso de scripts SQL para la creación inicial de tablas y configuración de base de datos relacional.
+Arquitectura: Implementación de los patrones Controller, Service, Repository y DTO para separar la lógica de negocio del acceso a datos.
+* **Gestión de Datos:**
+  * Creación de controladores, servicios y repositorios para las entidades "Autor", "Genero" y "Origen".
+  * Implementación de consultas personalizadas (custom queries) con mapeo directo a objetos DTO en los repositorios.
+* **Persistencia:** Uso de migraciones automatizadas con Flyway para la creación inicial de tablas (`autores`, `generos`, `origenes`) e inserción de datos base en la base de datos relacional.
 
 Configuración y Ejecución
-Requisitos: Tener instalado Java 21 y MySQL.
-
-Base de Datos: Crea manualmente la base de datos db_mangas en tu servidor MySQL.
-
-Ejecución:
-Puedes ejecutar el proyecto utilizando Maven:
-
-Documentación de API
-Una vez ejecutada la aplicación, puedes acceder a la documentación interactiva en:
-http://localhost:8081/doc/swagger-ui/index.html
-http://localhost:8081/api/v1/mangas
-http://localhost:8080/api/v1/mangas
-http://localhost:8761/Eureka
+* **Requisitos:** Tener instalado Java y MySQL.
+* **Base de Datos:** La base de datos `db_tienda_manga` se creará automáticamente en tu servidor MySQL al iniciar la aplicación.
+Ejecución: Puedes ejecutar el proyecto utilizando Maven desde la terminal dentro de la carpeta `autores`:
+  ```cmd
+  mvnw spring-boot:run
