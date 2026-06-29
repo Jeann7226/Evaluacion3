@@ -13,16 +13,22 @@ spring:
               uri: http://localhost:8081
               predicates:
                 - Path=/api/v1/mangas/**, /api/v1/demografias/**, /api/v1/inventarios/**, /v3/api-docs/mangas
+              filters:
+                - SetPath=/v3/api-docs
 
             - id: autores-service
               uri: http://localhost:8082
               predicates:
                 - Path=/api/v1/autores/**, /api/v1/generos/**, /api/v1/origenes/**, /v3/api-docs/autores
+              filters:
+                - SetPath=/v3/api-docs
 
             - id: usuarios-service
               uri: http://localhost:8083
               predicates:
                 - Path=/api/v1/usuarios/**, /api/v1/carritos/**, /api/v1/pagos/**, /api/v1/resenas/**, /v3/api-docs/usuarios
+              filters:
+                - SetPath=/v3/api-docs
             
 eureka:
   client:
@@ -36,8 +42,8 @@ springdoc:
     path: /swagger-ui.html
     urls:
       - name: Microservicio Mangas
-        url: /api/v1/mangas/v3/api-docs
+        url: /v3/api-docs/mangas
       - name: Microservicio Autores
-        url: /api/v1/autores/v3/api-docs
+        url: /v3/api-docs/autores
       - name: Microservicio Usuarios
-        url: /api/v1/usuarios/v3/api-docs
+        url: /v3/api-docs/usuarios
