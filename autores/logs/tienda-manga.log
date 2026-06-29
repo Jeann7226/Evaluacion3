@@ -623,3 +623,80 @@ Caused by: java.sql.SQLSyntaxErrorException: Table 'db_tienda_manga.flyway_schem
 2026-06-28T23:31:48.784-04:00  INFO 11960 --- [autores] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
 2026-06-28T23:31:48.784-04:00  INFO 11960 --- [autores] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
 2026-06-28T23:31:48.822-04:00  INFO 11960 --- [autores] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-28T23:36:28.852-04:00  INFO 5688 --- [autores] [main] com.autor.autores.AutoresApplication     : Starting AutoresApplication using Java 21.0.11 with PID 5688 (C:\Users\rauli\OneDrive\Documentos\GitHub\Evaluacion3\autores\target\classes started by Rapp in C:\Users\rauli\OneDrive\Documentos\GitHub\Evaluacion3\autores)
+2026-06-28T23:36:28.860-04:00  INFO 5688 --- [autores] [main] com.autor.autores.AutoresApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-28T23:36:31.412-04:00  INFO 5688 --- [autores] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-28T23:36:31.757-04:00  INFO 5688 --- [autores] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 325 ms. Found 3 JPA repository interfaces.
+2026-06-28T23:36:32.283-04:00  INFO 5688 --- [autores] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fc338353-56f3-3dcd-9d0e-c2265cbca2eb
+2026-06-28T23:36:33.200-04:00  INFO 5688 --- [autores] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-06-28T23:36:33.239-04:00  INFO 5688 --- [autores] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-28T23:36:33.241-04:00  INFO 5688 --- [autores] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-28T23:36:33.413-04:00  INFO 5688 --- [autores] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 4451 ms
+2026-06-28T23:36:34.473-04:00  INFO 5688 --- [autores] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-28T23:36:34.782-04:00  INFO 5688 --- [autores] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45451333
+2026-06-28T23:36:34.785-04:00  INFO 5688 --- [autores] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-28T23:36:34.803-04:00  INFO 5688 --- [autores] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/db_tienda_manga_autores?createDatabaseIfNotExist=true (MySQL 5.5)
+2026-06-28T23:36:35.763-04:00  INFO 5688 --- [autores] [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.042s)
+2026-06-28T23:36:35.778-04:00  INFO 5688 --- [autores] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_tienda_manga_autores`: 1
+2026-06-28T23:36:35.782-04:00  INFO 5688 --- [autores] [main] o.f.core.internal.command.DbMigrate      : Schema `db_tienda_manga_autores` is up to date. No migration necessary.
+2026-06-28T23:36:35.948-04:00  INFO 5688 --- [autores] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-28T23:36:36.046-04:00  INFO 5688 --- [autores] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-28T23:36:36.865-04:00  INFO 5688 --- [autores] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-28T23:36:36.989-04:00  WARN 5688 --- [autores] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-28T23:36:37.016-04:00  INFO 5688 --- [autores] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_tienda_manga_autores?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: db_tienda_manga_autores/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-28T23:36:38.580-04:00  INFO 5688 --- [autores] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-28T23:36:38.596-04:00  INFO 5688 --- [autores] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28T23:36:38.748-04:00  INFO 5688 --- [autores] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-28T23:36:40.540-04:00  WARN 5688 --- [autores] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-28T23:36:42.208-04:00  INFO 5688 --- [autores] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T23:36:43.266-04:00  INFO 5688 --- [autores] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T23:36:44.455-04:00  INFO 5688 --- [autores] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T23:36:44.480-04:00  INFO 5688 --- [autores] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-28T23:36:44.552-04:00  WARN 5688 --- [autores] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-28T23:36:44.563-04:00  INFO 5688 --- [autores] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-06-28T23:36:44.679-04:00  INFO 5688 --- [autores] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-28T23:36:44.726-04:00  INFO 5688 --- [autores] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-28T23:36:44.733-04:00  INFO 5688 --- [autores] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T23:36:44.747-04:00  INFO 5688 --- [autores] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-28T23:36:44.747-04:00  INFO 5688 --- [autores] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-28T23:36:44.747-04:00  INFO 5688 --- [autores] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-28T23:36:44.748-04:00  INFO 5688 --- [autores] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-28T23:36:44.748-04:00  INFO 5688 --- [autores] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-28T23:36:44.749-04:00  INFO 5688 --- [autores] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-28T23:36:44.749-04:00  INFO 5688 --- [autores] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-28T23:36:45.278-04:00  INFO 5688 --- [autores] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-28T23:36:45.280-04:00  INFO 5688 --- [autores] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-28T23:36:45.284-04:00  INFO 5688 --- [autores] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-28T23:36:45.287-04:00  INFO 5688 --- [autores] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782704205286 with initial instances count: 0
+2026-06-28T23:36:45.291-04:00  INFO 5688 --- [autores] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTORES with eureka with status UP
+2026-06-28T23:36:45.294-04:00  INFO 5688 --- [autores] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782704205294, current=UP, previous=STARTING]
+2026-06-28T23:36:45.297-04:00  INFO 5688 --- [autores] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTORES/localhost:autores:8082: registering service...
+2026-06-28T23:36:45.331-04:00  INFO 5688 --- [autores] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-06-28T23:36:45.333-04:00  INFO 5688 --- [autores] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-06-28T23:36:45.375-04:00  INFO 5688 --- [autores] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTORES/localhost:autores:8082 - registration status: 204
+2026-06-28T23:36:46.338-04:00  INFO 5688 --- [autores] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T23:36:47.351-04:00  INFO 5688 --- [autores] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-06-28T23:36:47.364-04:00  INFO 5688 --- [autores] [main] com.autor.autores.AutoresApplication     : Started AutoresApplication in 20.574 seconds (process running for 22.195)
+2026-06-28T23:37:15.294-04:00  INFO 5688 --- [autores] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-28T23:37:15.295-04:00  INFO 5688 --- [autores] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-28T23:37:15.296-04:00  INFO 5688 --- [autores] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-28T23:37:15.297-04:00  INFO 5688 --- [autores] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-28T23:37:15.298-04:00  INFO 5688 --- [autores] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-28T23:37:15.298-04:00  INFO 5688 --- [autores] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-06-28T23:37:15.299-04:00  INFO 5688 --- [autores] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-28T23:37:15.333-04:00  INFO 5688 --- [autores] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-28T23:37:24.377-04:00  INFO 5688 --- [autores] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-28T23:37:24.378-04:00  INFO 5688 --- [autores] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-28T23:37:24.381-04:00  INFO 5688 --- [autores] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-28T23:37:24.779-04:00  INFO 5688 --- [autores] [http-nio-8082-exec-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 333 ms
