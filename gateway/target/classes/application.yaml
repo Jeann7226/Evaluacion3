@@ -36,8 +36,8 @@ springdoc:
     path: /swagger-ui.html
     urls:
       - name: Microservicio Mangas
-        url: /mangas/api-docs
+        url: /api/v1/mangas/v3/api-docs
       - name: Microservicio Autores
-        url: /autores/api-docs
+        url: /api/v1/autores/v3/api-docs
       - name: Microservicio Usuarios
-        url: /usuarios/api-docs
+        url: /api/v1/usuarios/v3/api-docs

@@ -30,4 +30,4 @@ server:
 
 springdoc:
   api-docs:
-    path: /api-docs
+    path: /api/v1/autores/v3/api-docs

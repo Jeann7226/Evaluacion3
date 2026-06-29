@@ -56,10 +56,8 @@ server:
   port: ${PORT:8081}
 
 springdoc:
-  swagger-ui:
-    path: /doc/swagger-ui/index.html
   api-docs:
-    path: /api-docs
+    path: /api/v1/mangas/v3/api-docs
 logging:
   level:
     com.manga.mangas: DEBUG
