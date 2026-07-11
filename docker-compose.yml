@@ -1,0 +1,97 @@
+version: '3.8'
+
+services:
+  mysql-db:
+    image: mysql:8.0
+    container_name: mysql-db
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    networks:
+      - network-manga
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  # 2. Servidor de Descubrimiento (Eureka)
+  eureka-server:
+    build: ./eureka
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - network-manga
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8761/actuator/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+  # 3. API Gateway
+  api-gateway:
+    build: ./gateway
+    container_name: api-gateway
+    ports:
+      - "8080:8080"
+    environment:
+      EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_PROFILES_ACTIVE: dev
+    networks:
+      - network-manga
+    depends_on:
+      eureka-server:
+        condition: service_healthy
+
+  mangas-service:
+    build: ./mangas
+    container_name: mangas-service
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/db_tienda_manga_mangas?createDatabaseIfNotExist=true
+    networks:
+      - network-manga
+    depends_on:
+      mysql-db:
+        condition: service_healthy
+      eureka-server:
+        condition: service_healthy
+
+  autores-service:
+    build: ./autores
+    container_name: autores-service
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/db_tienda_manga_autores?createDatabaseIfNotExist=true
+    networks:
+      - network-manga
+    depends_on:
+      mysql-db:
+        condition: service_healthy
+      eureka-server:
+        condition: service_healthy
+
+  usuarios-service:
+    build: ./usuarios
+    container_name: usuarios-service
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/db_tienda_manga_usuarios?createDatabaseIfNotExist=true
+    networks:
+      - network-manga
+    depends_on:
+      mysql-db:
+        condition: service_healthy
+      eureka-server:
+        condition: service_healthy
+
+networks:
+  network-manga:
+    driver: bridge
