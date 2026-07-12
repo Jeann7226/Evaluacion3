@@ -17,7 +17,6 @@ services:
       timeout: 5s
       retries: 20
 
-  # 2. Servidor de Descubrimiento (Eureka)
   eureka-server:
     build: ./eureka
     container_name: eureka-server
