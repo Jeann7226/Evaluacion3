@@ -13,7 +13,7 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI(){
         return new OpenAPI()
             .info(new Info()
-                .title("Manga API")
+                .title("Usuario API")
                 .version("1.0")
                 .description("API para gestionar usuarios, carritos, pagos y reseñas"));
     }
