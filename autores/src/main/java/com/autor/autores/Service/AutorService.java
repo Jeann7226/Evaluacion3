@@ -25,7 +25,7 @@ public class AutorService {
         return listaDTOs;
     }
 
-    public AutorDTO buscarPorId(Integer id) {
+    public AutorDTO buscarAutor(Integer id) {
         Autor a = autorRepository.findById(id).orElseThrow(() -> new RuntimeException("Autor no encontrado"));
         return convertirADTO(a);
     }

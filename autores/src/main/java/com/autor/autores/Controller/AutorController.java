@@ -53,7 +53,7 @@ public class AutorController {
     })
     public ResponseEntity<?> porId(@PathVariable Integer id) {
         try {
-            AutorDTO dto = autorService.buscarPorId(id);
+            AutorDTO dto = autorService.buscarAutor(id);
             return new ResponseEntity<>(dto, HttpStatus.OK);
         } catch (RuntimeException e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);

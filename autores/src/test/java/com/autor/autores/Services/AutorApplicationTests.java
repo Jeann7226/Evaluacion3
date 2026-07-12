@@ -46,7 +46,7 @@ public class AutorApplicationTests {
         autorSimulado.setApellido("araki");
 
         when(autorRepository.findById(idSimulado)).thenReturn(Optional.of(autorSimulado));
-        AutorDTO resultado = autorService.buscarPorId(idSimulado);
+        AutorDTO resultado = autorService.buscarAutor(idSimulado);
         assertNotNull(resultado, "El DTO restante no deberia ser nulo");
         assertEquals(autorSimulado.getNombre(), resultado.getNombre(), "El nombre no coincide");
         assertEquals(autorSimulado.getApellido(), resultado.getApellido(), "El apellido no coincide");
