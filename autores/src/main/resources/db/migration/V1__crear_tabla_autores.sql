@@ -17,3 +17,4 @@ CREATE TABLE origenes(
 INSERT INTO autores (nombre, apellido) VALUES ('Hirohiko', 'Araki');
 INSERT INTO generos (generoTematico) VALUES ('Seinen');
 INSERT INTO origenes (paisOrigen) VALUES ('Japon');
+
