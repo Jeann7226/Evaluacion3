@@ -1,0 +1,2 @@
+com\manga\gateway\GatewayApplication.class
+com\manga\gateway\config\GatewayCorsConfig.class

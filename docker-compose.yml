@@ -12,10 +12,10 @@ services:
     networks:
       - network-manga
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      interval: 10s
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root"]
+      interval: 5s
       timeout: 5s
-      retries: 20
+      retries: 10
 
   eureka-server:
     build: ./eureka
@@ -31,7 +31,6 @@ services:
       retries: 10
       start_period: 30s
 
-  # 3. API Gateway
   api-gateway:
     build: ./gateway
     container_name: api-gateway
@@ -49,10 +48,13 @@ services:
   mangas-service:
     build: ./mangas
     container_name: mangas-service
+    ports:
+      - "8081:8081"
     environment:
       SPRING_PROFILES_ACTIVE: dev
       EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: http://eureka-server:8761/eureka/
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/db_tienda_manga_mangas?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_HIKARI_INITIALIZATION_FAIL_TIMEOUT: -1
     networks:
       - network-manga
     depends_on:
@@ -64,10 +66,13 @@ services:
   autores-service:
     build: ./autores
     container_name: autores-service
+    ports:
+      - "8082:8082"
     environment:
       SPRING_PROFILES_ACTIVE: dev
       EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: http://eureka-server:8761/eureka/
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/db_tienda_manga_autores?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_HIKARI_INITIALIZATION_FAIL_TIMEOUT: -1
     networks:
       - network-manga
     depends_on:
@@ -79,10 +84,13 @@ services:
   usuarios-service:
     build: ./usuarios
     container_name: usuarios-service
+    ports:
+      - "8083:8083"
     environment:
       SPRING_PROFILES_ACTIVE: dev
       EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE: http://eureka-server:8761/eureka/
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/db_tienda_manga_usuarios?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_HIKARI_INITIALIZATION_FAIL_TIMEOUT: -1
     networks:
       - network-manga
     depends_on:
