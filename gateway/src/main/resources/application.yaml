@@ -12,23 +12,17 @@ spring:
             - id: mangas-service 
               uri: http://mangas-service:8081
               predicates:
-                - Path=/api/v1/mangas/**, /api/v1/demografias/**, /api/v1/inventarios/**, /api/v1/mangas/v3/api-docs
-              filters:
-                - RewritePath=/api/v1/mangas/v3/api-docs, /v3/api-docs
+                - Path=/api/v1/mangas/**, /api/v1/demografias/**, /api/v1/inventarios/**
 
             - id: autores-service
               uri: http://autores-service:8082
               predicates:
-                - Path=/api/v1/autores/**, /api/v1/generos/**, /api/v1/origenes/**, /api/v1/autores/v3/api-docs
-              filters:
-                - RewritePath=/api/v1/autores/v3/api-docs, /v3/api-docs
+                - Path=/api/v1/autores/**, /api/v1/generos/**, /api/v1/origenes/**
 
             - id: usuarios-service
               uri: http://usuarios-service:8083
               predicates:
-                - Path=/api/v1/usuarios/**, /api/v1/carritos/**, /api/v1/pagos/**, /api/v1/resenas/**, /api/v1/usuarios/v3/api-docs
-              filters:
-                - RewritePath=/api/v1/usuarios/v3/api-docs, /v3/api-docs
+                - Path=/api/v1/usuarios/**, /api/v1/carritos/**, /api/v1/pagos/**, /api/v1/resenas/**
             
 eureka:
   client:
