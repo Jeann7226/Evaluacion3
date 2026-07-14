@@ -3,6 +3,11 @@ package com.autor.autores.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.CollectionModel;
+
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.autor.autores.Assemblers.OrigenModelAssembler;
 import com.autor.autores.DTO.OrigenDTO;
 import com.autor.autores.Model.Origen;
 import com.autor.autores.Service.OrigenService;
@@ -31,14 +37,25 @@ public class OrigenController {
     @Autowired
     private OrigenService origenService;
 
+    @Autowired
+    private OrigenModelAssembler origenModelAssembler;
+
     @GetMapping
     @Operation(summary = "Obtener todos los orígenes", description = "Obtiene una lista de todos los orígenes registrados en el sistema.")
     @ApiResponse(responseCode = "200", description = "Lista de orígenes obtenida exitosamente",
             content = @Content(mediaType = "application/json", 
             array = @ArraySchema(schema = @Schema(implementation = OrigenDTO.class))))
-    public ResponseEntity<List<OrigenDTO>> todos() {
+    public ResponseEntity<CollectionModel<EntityModel<OrigenDTO>>> todos() {
         List<OrigenDTO> lista = origenService.obtenerTodos();
-        return new ResponseEntity<>(lista, HttpStatus.OK);
+
+        List<EntityModel<OrigenDTO>> origenesWithLinks = lista.stream()
+            .map(origenModelAssembler::toModel)
+            .toList();
+
+            CollectionModel<EntityModel<OrigenDTO>> collectionModel = CollectionModel.of(origenesWithLinks,
+                linkTo(methodOn(OrigenController.class).todos()).withSelfRel()
+            );
+        return new ResponseEntity<>(collectionModel, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")

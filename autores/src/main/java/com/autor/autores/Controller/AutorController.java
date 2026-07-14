@@ -1,9 +1,13 @@
 package com.autor.autores.Controller;
 
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.autor.autores.DTO.AutorDTO;
 import com.autor.autores.Model.Autor;
 import com.autor.autores.Service.AutorService;
+import com.autor.autores.Assemblers.AutorModelAssembler;
 
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -32,14 +37,25 @@ public class AutorController {
     @Autowired
     private AutorService autorService;
 
+    @Autowired
+    private AutorModelAssembler autorModelAssembler;
+
     @GetMapping
     @Operation(summary = "Obtener todos los autores", description = "Obtiene una lista de todos los autores registrados en el sistema.")
     @ApiResponse(responseCode = "200", description = "Lista de autores obtenida exitosamente",
             content = @Content(mediaType = "application/json", 
             array = @ArraySchema(schema = @Schema(implementation = AutorDTO.class))))
-    public ResponseEntity<List<AutorDTO>> todos() {
+    public ResponseEntity<CollectionModel<EntityModel<AutorDTO>>> todos() {
         List<AutorDTO> lista = autorService.obtenerTodos();
-        return new ResponseEntity<>(lista, HttpStatus.OK);
+
+        List<EntityModel<AutorDTO>> autoresWithLinks = lista.stream()
+            .map(autorModelAssembler::toModel)
+            .toList();
+
+            CollectionModel<EntityModel<AutorDTO>> collectionModel = CollectionModel.of(autoresWithLinks,
+                linkTo(methodOn(AutorController.class).todos()).withSelfRel()
+            );
+        return new ResponseEntity<>(CollectionModel.of(collectionModel), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
@@ -54,7 +70,7 @@ public class AutorController {
     public ResponseEntity<?> porId(@PathVariable Integer id) {
         try {
             AutorDTO dto = autorService.buscarAutor(id);
-            return new ResponseEntity<>(dto, HttpStatus.OK);
+            return new ResponseEntity<>(autorModelAssembler.toModel(dto), HttpStatus.OK);
         } catch (RuntimeException e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
@@ -72,7 +88,7 @@ public class AutorController {
     public ResponseEntity<?> registrarAutor(@Valid @RequestBody Autor autor) {
         try {
             AutorDTO dto = autorService.guardarAutor(autor);
-            return new ResponseEntity<>(dto, HttpStatus.CREATED);
+            return new ResponseEntity<>(autorModelAssembler.toModel(dto), HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>("Error en la búsqueda del autor", HttpStatus.BAD_REQUEST);
         }

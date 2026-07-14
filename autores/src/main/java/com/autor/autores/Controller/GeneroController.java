@@ -3,6 +3,10 @@ package com.autor.autores.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.EntityModel;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.autor.autores.DTO.GeneroDTO;
 import com.autor.autores.Model.Genero;
 import com.autor.autores.Service.GeneroService;
+import com.autor.autores.Assemblers.GeneroModelAssembler;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
@@ -30,14 +35,25 @@ public class GeneroController {
     @Autowired
     private GeneroService generoService;
 
+    @Autowired
+    private GeneroModelAssembler generoModelAssembler;
+
     @GetMapping
     @Operation(summary = "Obtener todos los géneros", description = "Obtiene una lista de todos los géneros registrados en el sistema.")
     @ApiResponse(responseCode = "200", description = "Lista de géneros obtenida exitosamente",
             content = @Content(mediaType = "application/json", 
             array = @ArraySchema(schema = @Schema(implementation = GeneroDTO.class))))
-    public ResponseEntity<List<GeneroDTO>> todos() {
+    public ResponseEntity<CollectionModel<EntityModel<GeneroDTO>>> todos() {
         List<GeneroDTO> lista = generoService.obtenerTodos();
-        return new ResponseEntity<>(lista, HttpStatus.OK);
+
+        List<EntityModel<GeneroDTO>> generosWithLinks = lista.stream()
+            .map(generoModelAssembler::toModel)
+            .toList();
+
+            CollectionModel<EntityModel<GeneroDTO>> collectionModel = CollectionModel.of(generosWithLinks,
+                linkTo(methodOn(GeneroController.class).todos()).withSelfRel()
+            );
+        return new ResponseEntity<>(collectionModel, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
@@ -52,7 +68,7 @@ public class GeneroController {
     public ResponseEntity<?> porId(@PathVariable Integer id) {
         try {
             GeneroDTO dto = generoService.buscarPorId(id);
-            return new ResponseEntity<>(dto, HttpStatus.OK);
+            return new ResponseEntity<>(generoModelAssembler.toModel(dto), HttpStatus.OK);
         } catch (RuntimeException e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
@@ -70,7 +86,7 @@ public class GeneroController {
     public ResponseEntity<?> registrarAutor(@Valid @RequestBody Genero genero) {
         try {
             GeneroDTO dto = generoService.guardarGenero(genero);
-            return new ResponseEntity<>(dto, HttpStatus.CREATED);
+            return new ResponseEntity<>(generoModelAssembler.toModel(dto), HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>("Error en el registro del género", HttpStatus.BAD_REQUEST);
         }

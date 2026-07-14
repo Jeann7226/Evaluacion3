@@ -6,14 +6,15 @@ import org.springframework.hateoas.EntityModel;
 import org.springframework.stereotype.Component;
 
 import com.manga.mangas.Controller.DemografiaController;
-import com.manga.mangas.Model.Demografia;
+import com.manga.mangas.DTO.DemografiaDTO;
+
 
 @Component
-public class DemografiaModelAssemblers implements org.springframework.hateoas.server.RepresentationModelAssembler<Demografia, EntityModel<Demografia>> {
+public class DemografiaModelAssemblers implements org.springframework.hateoas.server.RepresentationModelAssembler<DemografiaDTO, EntityModel<DemografiaDTO>> {
     @Override
-    public EntityModel<Demografia> toModel(Demografia demografia) {
-        return EntityModel.of(demografia,
-            linkTo(methodOn(DemografiaController.class).buscarDemografia(demografia.getIdDemografia())).withSelfRel()
+    public EntityModel<DemografiaDTO> toModel(DemografiaDTO dto) {
+        return EntityModel.of(dto,
+            linkTo(methodOn(DemografiaController.class).buscarDemografia(dto.getIdDemografia())).withSelfRel()
         );
     }
 

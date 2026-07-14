@@ -5,15 +5,19 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
+import org.springframework.stereotype.Component;
 
 import com.autor.autores.Controller.GeneroController;
-import com.autor.autores.Model.Genero;
+import com.autor.autores.DTO.GeneroDTO;
 
-public class GeneroModelAssembler implements RepresentationModelAssembler<Genero, EntityModel<Genero>> {
+@Component
+public class GeneroModelAssembler implements RepresentationModelAssembler<GeneroDTO, EntityModel<GeneroDTO>> {
     @Override
-    public EntityModel<Genero> toModel(Genero genero) {
-        return EntityModel.of(genero,
-            linkTo(methodOn(GeneroController.class).porId(genero.getIdGenero())).withSelfRel()
+    public EntityModel<GeneroDTO> toModel(GeneroDTO dto) {
+        return EntityModel.of(dto,
+            linkTo(methodOn(GeneroController.class).porId(dto.getIdGenero())).withSelfRel(),
+
+            linkTo(methodOn(GeneroController.class).todos()).withRel("generos")
         );
     }
 

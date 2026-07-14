@@ -63,3 +63,5 @@ logging:
     com.manga.mangas: DEBUG
     org.hibernate.SQL: DEBUG
     org.springframework.web: DEBUG
+
+springdoc.cache.disabled: true
